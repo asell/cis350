@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_new_workout">NewWorkoutActivity</string>
     <string name="title_activity_prev_workout">PrevWorkoutActivity</string>
+    <string name="title_activity_heart_rate">Measure Your Heart Rate</string>
 
 </resources>

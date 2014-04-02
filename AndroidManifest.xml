@@ -30,6 +30,10 @@
             android:name="com.example.danceforhealth.PrevWorkoutActivity"
             android:label="@string/title_activity_prev_workout" >
         </activity>
+        <activity
+            android:name="com.example.danceforhealth.HeartRateActivity"
+            android:label="@string/title_activity_heart_rate" >
+        </activity>
     </application>
 
 </manifest>

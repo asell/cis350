@@ -20,7 +20,7 @@ public class HomeActivity extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
-	
+
 	public void onNewButtonClick(View view) {
 		// create an Intent using the current Activity 
 		// and the Class to be created
@@ -30,7 +30,7 @@ public class HomeActivity extends Activity {
 		// using the specified request code
 		startActivity(i);
 	}
-	
+
 	public void onPrevButtonClick(View view) {
 		// create an Intent using the current Activity 
 		// and the Class to be created

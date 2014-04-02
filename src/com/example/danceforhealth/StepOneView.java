@@ -1,0 +1,39 @@
+package com.example.danceforhealth;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+
+public class StepOneView extends View {
+
+	private Canvas canvas;					// the current canvas
+	private Bitmap image;					// the heart rate image
+	
+	public StepOneView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		init();
+	}
+	
+	private void init() {
+		/* one-time initialization stuff */
+		//setBackgroundColor(0xFF00FF00);
+		
+		// create the image of the unicorn
+		//image = BitmapFactory.decodeResource(getResources(), R.drawable.heartrate1);
+		//image = Bitmap.createScaledBitmap(image, 150, 150, false);
+	}
+	
+	public void onDraw(Canvas c) {
+		/* called each time this View is drawn */
+		canvas = c;
+	}
+	
+	public boolean onTouchEvent(MotionEvent e) {
+		return false;
+	}
+	
+}
