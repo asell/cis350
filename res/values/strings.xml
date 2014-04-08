@@ -7,5 +7,12 @@
     <string name="title_activity_new_workout">NewWorkoutActivity</string>
     <string name="title_activity_prev_workout">PrevWorkoutActivity</string>
     <string name="title_activity_heart_rate">Measure Your Heart Rate</string>
+    <string-array name="workouts_array">
+        <item>Dance</item>
+        <item>Run</item>
+        <item>Walk</item>
+        <item>Bike</item>
+        <item>Swim</item>
+    </string-array>
 
 </resources>
