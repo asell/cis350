@@ -7,12 +7,21 @@
     <string name="title_activity_new_workout">NewWorkoutActivity</string>
     <string name="title_activity_prev_workout">PrevWorkoutActivity</string>
     <string name="title_activity_heart_rate">Measure Your Heart Rate</string>
+    <string name="rating_header">Please rate how you feel at the moment about the workout you have been doing</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
     <string-array name="workouts_array">
         <item>Dance</item>
         <item>Run</item>
         <item>Walk</item>
         <item>Bike</item>
         <item>Swim</item>
+        <item>Other</item>
     </string-array>
 
 </resources>
