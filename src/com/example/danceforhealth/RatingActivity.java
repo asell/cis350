@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 public class RatingActivity extends Activity{
-	String workoutType;
+	private String workoutType;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -22,7 +22,7 @@ public class RatingActivity extends Activity{
 		
 			// create an Intent using the current Activity 
 			// and the Class to be created
-			Intent i = new Intent(this, WeightAndStepsActivity.class);
+			Intent i = new Intent(this, WeightAndStepsActivity.class).putExtra("workoutType", workoutType);
 	
 			// pass the Intent to the Activity, 
 			// using the specified request code
