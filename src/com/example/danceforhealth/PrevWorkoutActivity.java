@@ -12,8 +12,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 public class PrevWorkoutActivity extends Activity {
 
@@ -21,20 +26,32 @@ public class PrevWorkoutActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_prev_workout);
-		//view = (PrevWorkoutView) findViewById(R.id.prevWorkoutView);
-		//view.act = this;
+
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+
+
+
+		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+		// Create an ArrayAdapter using the string array and a default spinner layout
 		
+		//Adapter adapter = new ArrayAdapter(all);
+		
+		ArrayAdapter<Workout> adapter = new ArrayAdapter<Workout>(this, android.R.layout.simple_spinner_item, all);
+		spinner.setAdapter(adapter);
+		// Specify the layout to use when the list of choices appears
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		// Apply the adapter to the spinner
+		spinner.setAdapter(adapter);
 	}
-	
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.prev_workout, menu);
+		getMenuInflater().inflate(R.menu.new_workout, menu);
 		return true;
 	}
 
-	
 	public void onBackButtonClick(View view) {
 		// create an Intent using the current Activity 
 		// and the Class to be created
@@ -45,41 +62,44 @@ public class PrevWorkoutActivity extends Activity {
 		startActivity(i);
 	}
 
-	
+	/**
     protected void createButtons(){
     // dynamically created buttons work just need to
-    LinearLayout scrViewButLay = (LinearLayout) findViewById(R.id.scrollView1);
-    scrViewButLay.removeAllViews();
-    
+    //LinearLayout scrViewButLay = (LinearLayout) findViewById(R.id.scrollView1);
+   // scrViewButLay.removeAllViews();
+
     PrevWorkout pw = PrevWorkout.getInstance();
 	List<Workout> all = pw.getPrevious();
-    
+
     Button[] allButtons = new Button[all.size()];
     Log.i("Showing workout", "num buttons = " + all.size());
-    for(int i = 0; i < all.size(); i++){
-        Log.i("DB_NAME_TAG", all.get(i).toString());
-    }
+
     for (int index = 0; index < all.size(); index++) {
         allButtons[index] = new Button(this); 
         allButtons[index].setText(all.get(index).toString());
-        scrViewButLay.addView(allButtons[index]);
+      //  scrViewButLay.addView(allButtons[index]);
         allButtons[index].setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 // Each buttons specific event
                 /*
-                 * Left off here
-                 */
+	 * Left off here
+	 *
                 Intent intent = new Intent();
                 startActivity(intent);
-                
+
             }
         });
     }
 
     // end of dynamically allocated buttons
 }
+	 */	
+	
+
+
 	
 	
+
 }
