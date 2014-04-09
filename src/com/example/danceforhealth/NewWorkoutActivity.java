@@ -3,18 +3,25 @@ package com.example.danceforhealth;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
-public class NewWorkoutActivity extends Activity {
+public class NewWorkoutActivity extends Activity implements OnItemSelectedListener{
 
+	String selection = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_workout);
 		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+		spinner.setOnItemSelectedListener(this);
 		// Create an ArrayAdapter using the string array and a default spinner layout
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 		        R.array.workouts_array, android.R.layout.simple_spinner_item);
@@ -23,22 +30,55 @@ public class NewWorkoutActivity extends Activity {
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.new_workout, menu);
-		return true;
-	}
 	
 	public void onNextButtonClick(View view) {
-		// create an Intent using the current Activity 
-		// and the Class to be created
-		Intent i = new Intent(this, RatingActivity.class);
+		if(selection == null) {
+			Toast toast = Toast.makeText(getApplicationContext(), "You must select a workout type before continuing", Toast.LENGTH_SHORT);
+			toast.show();
+		}
+		else {
+			// create an Intent using the current Activity 
+			// and the Class to be created
+			Intent i = new Intent(this, RatingActivity.class).putExtra("workoutType", selection);
+	
+			// pass the Intent to the Activity, 
+			// using the specified request code
+			startActivity(i);
+		}
+	}
 
-		// pass the Intent to the Activity, 
-		// using the specified request code
-		startActivity(i);
+	
+	// figure out how to access string array elements--not just hardcode workouts
+	@Override
+	public void onItemSelected(AdapterView<?> parent, View view, int position,
+			long id) {
+		switch(position) {
+		case 0:
+			selection = "Dance";
+			break;
+		case 1:
+			selection = "Run";
+			break;
+		case 2:
+			selection = "Walk";
+			break;
+		case 3:
+			selection = "Bike";
+			break;
+		case 4:
+			selection = "Swim";
+			break;
+		// learn how to allow user to input "other" in dropdown text box
+		case 5:
+			selection = "Other";
+		}
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> parent) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
