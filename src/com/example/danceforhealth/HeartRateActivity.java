@@ -7,9 +7,7 @@ import android.view.Menu;
 import android.view.View;
 
 public class HeartRateActivity extends Activity {
-	private int weight;
-	private int steps;
-	private String workoutType;
+	private Workout w;
 	private int heartrate;
 
 	@Override
@@ -18,9 +16,7 @@ public class HeartRateActivity extends Activity {
 		setContentView(R.layout.activity_heart_rate);
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
-		    workoutType = extras.getString("workoutType");
-		    weight = extras.getInt("weight");
-		    steps = extras.getInt("steps");
+		    w = (Workout) extras.get("workout");
 		}
 	}
 
@@ -35,7 +31,7 @@ public class HeartRateActivity extends Activity {
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created
-		Intent i = new Intent(this, WorkoutSummary.class).putExtra("workoutType", workoutType).putExtra("weight", weight).putExtra("steps", steps).putExtra("heartrate", heartrate);
+		Intent i = new Intent(this, WorkoutSummary.class).putExtra("workout", w);
 
 		// pass the Intent to the Activity, 
 		// using the specified request code

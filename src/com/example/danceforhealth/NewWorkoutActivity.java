@@ -15,7 +15,8 @@ import android.widget.Toast;
 
 public class NewWorkoutActivity extends Activity implements OnItemSelectedListener{
 
-	String selection = null;
+	String selection = "Dance";
+	Workout w = new Workout();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,19 +33,14 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 	}
 	
 	public void onNextButtonClick(View view) {
-		if(selection == null) {
-			Toast toast = Toast.makeText(getApplicationContext(), "You must select a workout type before continuing", Toast.LENGTH_SHORT);
-			toast.show();
-		}
-		else {
+			w.setType(selection);
 			// create an Intent using the current Activity 
 			// and the Class to be created
-			Intent i = new Intent(this, RatingActivity.class).putExtra("workoutType", selection);
+			Intent i = new Intent(this, RatingActivity.class).putExtra("workout", w);
 	
 			// pass the Intent to the Activity, 
 			// using the specified request code
 			startActivity(i);
-		}
 	}
 
 	

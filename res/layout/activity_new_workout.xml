@@ -8,23 +8,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NewWorkoutActivity" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/spinner1"
-        android:layout_marginTop="68dp"
-        android:onClick="onNextButtonClick"
-        android:text="@string/next" />
-
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="144dp" />
+        android:layout_marginTop="94dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:onClick="onNextButtonClick"
+        android:text="@string/next" />
 
 </RelativeLayout>

@@ -4,30 +4,43 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class WeightAndStepsActivity extends Activity{
 	private int weight;
 	private int steps;
-	private String workoutType;
+	private Workout w;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_weight_and_steps);
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
-		    workoutType = extras.getString("workoutType");
+		    w = (Workout) extras.get("workout");
 		}
 	}
 	
 	public void onNextButtonClick(View view) {
+		EditText et1 = (EditText) findViewById(R.id.editText1);
+		EditText et2 = (EditText) findViewById(R.id.editText2);
+		if(!et1.getText().toString().trim().equals("")) {
+			steps = Integer.parseInt(et1.getText().toString());
+			w.setSteps(steps);
+		}
+		if(!et2.getText().toString().trim().equals("")) {
+			weight = Integer.parseInt(et2.getText().toString());
+			w.setWeight(weight);
+		}
+		
+		
 	
-			// create an Intent using the current Activity 
-			// and the Class to be created
-			Intent i = new Intent(this, HeartRateActivity.class).putExtra("workoutType", workoutType).putExtra("weight", weight).putExtra("steps", steps);
-	
-			// pass the Intent to the Activity, 
-			// using the specified request code
-			startActivity(i);
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, HeartRateActivity.class).putExtra("workout", w);
+
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
 	}
 }
