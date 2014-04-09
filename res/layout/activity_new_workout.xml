@@ -17,7 +17,7 @@
         android:layout_below="@+id/spinner1"
         android:layout_marginTop="68dp"
         android:onClick="onNextButtonClick"
-        android:text="Next" />
+        android:text="@string/next" />
 
     <Spinner
         android:id="@+id/spinner1"

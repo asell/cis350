@@ -69,6 +69,7 @@ public final class R {
         public static final int activity_prev_workout=0x7f030003;
         public static final int activity_rating=0x7f030004;
         public static final int activity_weight_and_steps=0x7f030005;
+        public static final int activity_workout_summary=0x7f030006;
     }
     public static final class menu {
         public static final int heart_rate=0x7f080000;
@@ -82,6 +83,7 @@ public final class R {
         public static final int five=0x7f05000b;
         public static final int four=0x7f05000a;
         public static final int hello_world=0x7f050002;
+        public static final int next=0x7f05000e;
         public static final int one=0x7f050007;
         public static final int rating_header=0x7f050006;
         public static final int seven=0x7f05000d;

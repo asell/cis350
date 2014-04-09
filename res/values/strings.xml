@@ -15,6 +15,7 @@
     <string name="five">5</string>
     <string name="six">6</string>
     <string name="seven">7</string>
+    <string name="next">Next</string>
     <string-array name="workouts_array">
         <item>Dance</item>
         <item>Run</item>
