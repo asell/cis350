@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
+import android.provider.SyncStateContract.Constants;
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.content.Intent;
@@ -21,16 +22,19 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
 public class PrevWorkoutActivity extends Activity {
+	
+	Button view;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_prev_workout);
+		
+		view = (Button) findViewById(R.id.button1); 
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
-
-
 
 		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
 		// Create an ArrayAdapter using the string array and a default spinner layout
@@ -43,6 +47,32 @@ public class PrevWorkoutActivity extends Activity {
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
+		
+		final Workout selected = (Workout) spinner.getSelectedItem();
+		
+		view.setOnClickListener(new View.OnClickListener() {
+			
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				Intent i = new Intent();
+				Bundle b = new Bundle();
+				b.putParcelable("this is the selected workout", selected);
+				i.putExtras(b);
+			
+				i.setClass(v.getContext(), WorkoutSummary.class);
+			
+				// pass the Intent to the Activity, 
+				// using the specified request code
+				startActivity(i);
+			}
+		});
+		
+		
+		
+		
 	}
 
 	@Override
