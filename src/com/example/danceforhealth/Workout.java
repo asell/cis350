@@ -13,6 +13,15 @@ public class Workout implements Parcelable {
 	private int weight;
 	private String date;
 	
+	public Workout() {
+		type = "";
+		strain = 0;
+		heartrate = 0;
+		steps = 0;
+		weight = 0;
+		date = "";
+	}
+	
 	public Workout(String type, int strain, int hr, int st, int wt) {
 		this.type = type;
 		this.strain = strain;
