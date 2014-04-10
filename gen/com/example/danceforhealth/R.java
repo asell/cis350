@@ -101,24 +101,28 @@ public final class R {
         public static final int home=0x7f080002;
         public static final int new_workout=0x7f080003;
         public static final int prev_workout=0x7f080004;
-        public static final int workout_summary=0x7f080005;
+        public static final int rating=0x7f080005;
+        public static final int weight_and_steps=0x7f080006;
+        public static final int workout_summary=0x7f080007;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int five=0x7f05000b;
-        public static final int four=0x7f05000a;
+        public static final int five=0x7f05000d;
+        public static final int four=0x7f05000c;
         public static final int hello_world=0x7f050002;
-        public static final int next=0x7f05000e;
-        public static final int one=0x7f050007;
-        public static final int rating_header=0x7f050006;
-        public static final int seven=0x7f05000d;
-        public static final int six=0x7f05000c;
-        public static final int three=0x7f050009;
+        public static final int next=0x7f050010;
+        public static final int one=0x7f050009;
+        public static final int rating_header=0x7f050008;
+        public static final int seven=0x7f05000f;
+        public static final int six=0x7f05000e;
+        public static final int three=0x7f05000b;
         public static final int title_activity_heart_rate=0x7f050005;
         public static final int title_activity_new_workout=0x7f050003;
         public static final int title_activity_prev_workout=0x7f050004;
-        public static final int two=0x7f050008;
+        public static final int title_activity_rating=0x7f050006;
+        public static final int title_activity_weight_and_steps=0x7f050007;
+        public static final int two=0x7f05000a;
     }
     public static final class style {
         /** 
