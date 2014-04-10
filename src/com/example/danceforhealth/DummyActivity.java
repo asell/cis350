@@ -21,20 +21,22 @@ public class DummyActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dummy);
 		
-		
+		Workout wo = new Workout("Dance", 10, 180, 500, 140);
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
 		
+		all.add(wo);
+		
 	}
-/**
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.dummy, menu);
 		return true;
 	}
-*/
+
 	
 	public void onBackButtonClick(View view) {
 		// create an Intent using the current Activity 

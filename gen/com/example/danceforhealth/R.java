@@ -49,8 +49,8 @@ public final class R {
         public static final int editText1=0x7f090020;
         public static final int editText2=0x7f090022;
         public static final int linearLayout1=0x7f090006;
-        public static final int newWorkout=0x7f090001;
-        public static final int preWorkout=0x7f090002;
+        public static final int newWorkout=0x7f090002;
+        public static final int preWorkout=0x7f090000;
         public static final int radio0=0x7f090009;
         public static final int radio1=0x7f09000a;
         public static final int radio2=0x7f09000b;
@@ -60,7 +60,7 @@ public final class R {
         public static final int radio6=0x7f09000f;
         public static final int radioGroup1=0x7f090008;
         public static final int spinner1=0x7f090005;
-        public static final int stepOneView=0x7f090000;
+        public static final int stepOneView=0x7f090001;
         public static final int textView1=0x7f090007;
         public static final int textView2=0x7f090021;
     }
@@ -75,10 +75,11 @@ public final class R {
         public static final int activity_workout_summary=0x7f030007;
     }
     public static final class menu {
-        public static final int heart_rate=0x7f080000;
-        public static final int home=0x7f080001;
-        public static final int new_workout=0x7f080002;
-        public static final int prev_workout=0x7f080003;
+        public static final int dummy=0x7f080000;
+        public static final int heart_rate=0x7f080001;
+        public static final int home=0x7f080002;
+        public static final int new_workout=0x7f080003;
+        public static final int prev_workout=0x7f080004;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
