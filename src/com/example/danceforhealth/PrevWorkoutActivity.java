@@ -78,7 +78,7 @@ public class PrevWorkoutActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.new_workout, menu);
+		getMenuInflater().inflate(R.menu.prev_workout, menu);
 		return true;
 	}
 

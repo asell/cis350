@@ -21,6 +21,7 @@
         android:layout_alignTop="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
         android:text="Here is the summary of your workout: " />
+    
 
    <Button
        android:id="@+id/button1"

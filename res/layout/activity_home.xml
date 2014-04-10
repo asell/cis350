@@ -12,24 +12,32 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-    
-    	<TextView
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:text="Welcome to the Dance for Health App!" />
-    	
-    	<Button android:id="@+id/newWorkout"
-    	    android:text="New Workout"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content" 
-    	    android:onClick="onNewButtonClick" />
-    	
-    	<Button android:id="@+id/preWorkout"
-    	    android:text="Previous Workouts"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content" 
-    	    android:onClick="onPrevButtonClick" />
-    
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the Dance for Health App!" />
+
+        <Button
+            android:id="@+id/newWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNewButtonClick"
+            android:text="New Workout" />
+
+        <Button
+            android:id="@+id/preWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onPrevButtonClick"
+            android:text="Previous Workouts" />
+
+        <Button
+            android:id="@+id/dummy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDummyClick"
+            android:text="TEST ME" />
     </LinearLayout>
 
 </RelativeLayout>
