@@ -60,13 +60,13 @@ public final class R {
         public static final int RadioGroup03=0x7f09001a;
         public static final int RadioGroup04=0x7f09002c;
         public static final int action_settings=0x7f090038;
-        public static final int button1=0x7f090005;
+        public static final int button1=0x7f090002;
         public static final int button2=0x7f090037;
-        public static final int dummy=0x7f090003;
+        public static final int dummy=0x7f090004;
         public static final int editText1=0x7f090035;
         public static final int editText2=0x7f090036;
         public static final int linearLayout1=0x7f090006;
-        public static final int newWorkout=0x7f090002;
+        public static final int newWorkout=0x7f090003;
         public static final int preWorkout=0x7f090000;
         public static final int radio0=0x7f090009;
         public static final int radio1=0x7f09000a;
@@ -76,7 +76,7 @@ public final class R {
         public static final int radio5=0x7f09000e;
         public static final int radio6=0x7f09000f;
         public static final int radioGroup1=0x7f090008;
-        public static final int spinner1=0x7f090004;
+        public static final int spinner1=0x7f090005;
         public static final int stepOneView=0x7f090001;
         public static final int textView1=0x7f090007;
         public static final int textView2=0x7f090010;
