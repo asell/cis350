@@ -35,6 +35,7 @@ public class WeightAndStepsActivity extends Activity{
 		
 		
 	
+<<<<<<< HEAD
 		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, HeartRateActivity.class).putExtra("workout", w);
@@ -42,5 +43,15 @@ public class WeightAndStepsActivity extends Activity{
 		// pass the Intent to the Activity, 
 		// using the specified request code
 		startActivity(i);
+=======
+			// create an Intent using the current Activity 
+			// and the Class to be created
+			Intent i = new Intent(this, HeartRateActivity.class).putExtra("workoutType", workoutType)
+					.putExtra("weight", weight).putExtra("steps", steps);
+	
+			// pass the Intent to the Activity, 
+			// using the specified request code
+			startActivity(i);
+>>>>>>> test
 	}
 }

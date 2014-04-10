@@ -32,6 +32,8 @@ public class PrevWorkoutActivity extends Activity {
 		setContentView(R.layout.activity_prev_workout);
 		
 		view = (Button) findViewById(R.id.button1); 
+		
+
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
@@ -78,7 +80,7 @@ public class PrevWorkoutActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.new_workout, menu);
+		getMenuInflater().inflate(R.menu.prev_workout, menu);
 		return true;
 	}
 
@@ -91,6 +93,9 @@ public class PrevWorkoutActivity extends Activity {
 		// using the specified request code
 		startActivity(i);
 	}
+	
+	
+	
 
 	/**
     protected void createButtons(){
