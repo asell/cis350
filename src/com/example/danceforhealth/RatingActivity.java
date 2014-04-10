@@ -3,6 +3,7 @@ package com.example.danceforhealth;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,6 +18,13 @@ public class RatingActivity extends Activity{
 		if (extras != null) {
 		    w = (Workout) extras.get("workout");
 		}
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.rating, menu);
+		return true;
 	}
 	
 	public void onNextButtonClick(View view) {

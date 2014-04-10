@@ -25,6 +25,11 @@
         <activity
             android:name="com.example.danceforhealth.NewWorkoutActivity"
             android:label="@string/title_activity_new_workout" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.danceforhealth.PrevWorkoutActivity"
@@ -33,9 +38,30 @@
         <activity
             android:name="com.example.danceforhealth.HeartRateActivity"
             android:label="@string/title_activity_heart_rate" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name="com.example.danceforhealth.DummyActivity"></activity>
-        <activity android:name="com.example.danceforhealth.WorkoutSummary"></activity>
+        <activity
+            android:name="com.example.danceforhealth.RatingActivity"
+            android:label="@string/title_activity_rating" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.danceforhealth.WeightAndStepsActivity"
+            android:label="@string/title_activity_weight_and_steps" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

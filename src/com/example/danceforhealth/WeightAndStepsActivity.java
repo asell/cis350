@@ -3,6 +3,7 @@ package com.example.danceforhealth;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -21,6 +22,13 @@ public class WeightAndStepsActivity extends Activity{
 		}
 	}
 	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.weight_and_steps, menu);
+		return true;
+	}
+	
 	public void onNextButtonClick(View view) {
 		EditText et1 = (EditText) findViewById(R.id.editText1);
 		EditText et2 = (EditText) findViewById(R.id.editText2);
@@ -35,7 +43,6 @@ public class WeightAndStepsActivity extends Activity{
 		
 		
 	
-<<<<<<< HEAD
 		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, HeartRateActivity.class).putExtra("workout", w);
@@ -43,15 +50,5 @@ public class WeightAndStepsActivity extends Activity{
 		// pass the Intent to the Activity, 
 		// using the specified request code
 		startActivity(i);
-=======
-			// create an Intent using the current Activity 
-			// and the Class to be created
-			Intent i = new Intent(this, HeartRateActivity.class).putExtra("workoutType", workoutType)
-					.putExtra("weight", weight).putExtra("steps", steps);
-	
-			// pass the Intent to the Activity, 
-			// using the specified request code
-			startActivity(i);
->>>>>>> test
 	}
 }
