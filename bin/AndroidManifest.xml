@@ -34,6 +34,8 @@
             android:name="com.example.danceforhealth.HeartRateActivity"
             android:label="@string/title_activity_heart_rate" >
         </activity>
+        <activity android:name="com.example.danceforhealth.DummyActivity"></activity>
+        <activity android:name="com.example.danceforhealth.WorkoutSummary"></activity>
     </application>
 
 </manifest>

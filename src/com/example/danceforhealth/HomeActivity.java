@@ -40,5 +40,15 @@ public class HomeActivity extends Activity {
 		// using the specified request code
 		startActivity(i);
 	}
+	
+	public void onDummyClick(View view) {
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, DummyActivity.class);
+
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
+	}
 
 }
