@@ -16,7 +16,7 @@ public class WorkoutSummary extends Activity{
 		
 		Bundle b = this.getIntent().getExtras();
 		if(b!=null)
-		    workout = b.getParcelable("this is the selected workout");
+		    workout = (Workout) b.get("workout");
 	}
 	
 	@Override

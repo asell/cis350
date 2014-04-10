@@ -19,7 +19,7 @@ public class Workout implements Parcelable {
 		heartrate = 0;
 		steps = 0;
 		weight = 0;
-		date = "";
+		date = date.toString();
 	}
 	
 	public Workout(String type, int strain, int hr, int st, int wt) {

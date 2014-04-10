@@ -1,5 +1,7 @@
 package com.example.danceforhealth;
 
+import java.util.List;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +15,7 @@ import android.widget.Toast;
 
 public class NewWorkoutActivity extends Activity implements OnItemSelectedListener{
 
-	String selection = "Dance";
+	public String selection;
 	Workout w = new Workout();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,11 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
+		
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+		all.add(w);
+		selection = "Dance";
 	}
 	
 	@Override
