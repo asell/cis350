@@ -43,8 +43,9 @@ public final class R {
         public static final int RadioButton14=0x7f09001d;
         public static final int RadioGroup01=0x7f090010;
         public static final int RadioGroup02=0x7f090018;
-        public static final int action_settings=0x7f090023;
+        public static final int action_settings=0x7f090024;
         public static final int button1=0x7f090004;
+        public static final int button2=0x7f090023;
         public static final int dummy=0x7f090003;
         public static final int editText1=0x7f090020;
         public static final int editText2=0x7f090022;
@@ -80,6 +81,7 @@ public final class R {
         public static final int home=0x7f080002;
         public static final int new_workout=0x7f080003;
         public static final int prev_workout=0x7f080004;
+        public static final int workout_summary=0x7f080005;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;

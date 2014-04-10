@@ -21,12 +21,9 @@ public class DummyActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dummy);
 		
-		Workout wo = new Workout("Dance", 10, 180, 500, 140);
-
-		PrevWorkout pw = PrevWorkout.getInstance();
-		List<Workout> all = pw.getPrevious();
 		
-		all.add(wo);
+		createWorkout();
+		
 		
 	}
 
@@ -37,6 +34,16 @@ public class DummyActivity extends Activity {
 		return true;
 	}
 
+	public void createWorkout() {
+		
+		Workout wo = new Workout("Dance", 10, 180, 500, 140);
+
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+		
+		all.add(wo);
+		
+	}
 	
 	public void onBackButtonClick(View view) {
 		// create an Intent using the current Activity 

@@ -32,6 +32,8 @@ public class PrevWorkoutActivity extends Activity {
 		setContentView(R.layout.activity_prev_workout);
 		
 		view = (Button) findViewById(R.id.button1); 
+		
+		createWorkout();
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
@@ -91,6 +93,22 @@ public class PrevWorkoutActivity extends Activity {
 		// using the specified request code
 		startActivity(i);
 	}
+	
+	public void createWorkout() {
+		
+	
+		Log.v("on previous activity", "We created a workout!");
+		
+		Workout wo = new Workout("Dance", 10, 180, 500, 140);
+
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+		
+		all.add(wo);
+		
+	}
+	
+	
 
 	/**
     protected void createButtons(){
