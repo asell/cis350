@@ -24,6 +24,15 @@ public class Workout implements Parcelable {
 		
 	}
 	
+	public Workout(Parcel p) {
+		setType(p.readString());
+		setStrain(p.readInt());
+		setHeartrate(p.readInt());
+		setSteps(p.readInt());
+		setWeight(p.readInt());
+		
+	}
+	
 	public String getDate() {
 		return date;
 	}
@@ -79,6 +88,20 @@ public class Workout implements Parcelable {
 	public String toString() {
 		return (this.getType() + "\n" + this.getDate());
 	}
+	
+	public static final Parcelable.Creator<Workout> CREATOR = new Creator<Workout>() {
+		public Workout createFromParcel(Parcel source) {
+
+	        return new Workout(source);
+	    }
+
+	    public Workout[] newArray(int size) {
+
+	        return new Workout[size];
+	    }
+
+	};
+
 
 	@Override
 	public int describeContents() {
@@ -87,8 +110,13 @@ public class Workout implements Parcelable {
 	}
 
 	@Override
-	public void writeToParcel(Parcel arg0, int arg1) {
-		// TODO Auto-generated method stub
+	public void writeToParcel(Parcel parcel, int flags) {
+		
+		parcel.writeString(getType());
+		parcel.writeInt(getStrain());
+		parcel.writeInt(getHR());
+		parcel.writeInt(getSteps());
+		parcel.writeInt(getWeight());
 		
 	}
 
