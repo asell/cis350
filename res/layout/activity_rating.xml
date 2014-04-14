@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="@string/rating_header"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five" />
+
+        <RadioButton
+            android:id="@+id/radio5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/six" />
+
+        <RadioButton
+            android:id="@+id/radio6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seven" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I hate it"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/RadioButton06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/RadioButton04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two" />
+
+        <RadioButton
+            android:id="@+id/RadioButton05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three" />
+
+        <RadioButton
+            android:id="@+id/RadioButton03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four" />
+
+        <RadioButton
+            android:id="@+id/RadioButton02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five" />
+
+        <RadioButton
+            android:id="@+id/RadioButton01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/six" />
+
+        <RadioButton
+            android:id="@+id/RadioButton07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seven" />
+    </RadioGroup>
+    
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It's not fun"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/RadioButton21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/RadioButton15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two" />
+
+        <RadioButton
+            android:id="@+id/RadioButton16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three" />
+
+        <RadioButton
+            android:id="@+id/RadioButton19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four" />
+
+        <RadioButton
+            android:id="@+id/RadioButton18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five" />
+
+        <RadioButton
+            android:id="@+id/RadioButton20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/six" />
+
+        <RadioButton
+            android:id="@+id/RadioButton17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seven" />
+    </RadioGroup>
+        
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I feel bad physically while doing it"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <RadioGroup
+        android:id="@+id/RadioGroup02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/RadioButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/RadioButton09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two" />
+
+        <RadioButton
+            android:id="@+id/RadioButton08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three" />
+
+        <RadioButton
+            android:id="@+id/RadioButton13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four" />
+
+        <RadioButton
+            android:id="@+id/RadioButton14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five" />
+
+        <RadioButton
+            android:id="@+id/RadioButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/six" />
+
+        <RadioButton
+            android:id="@+id/RadioButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seven" />
+    </RadioGroup>
+    
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am very frustrated by it"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/RadioButton28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/RadioButton22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two" />
+
+        <RadioButton
+            android:id="@+id/RadioButton23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three" />
+
+        <RadioButton
+            android:id="@+id/RadioButton26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four" />
+
+        <RadioButton
+            android:id="@+id/RadioButton25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five" />
+
+        <RadioButton
+            android:id="@+id/RadioButton27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/six" />
+
+        <RadioButton
+            android:id="@+id/RadioButton24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seven" />
+    </RadioGroup>
+    
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It makes me tired"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="onNextButtonClick"
+        android:text="@string/next" />
+
+</LinearLayout>

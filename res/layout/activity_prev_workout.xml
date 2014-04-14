@@ -8,9 +8,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".PrevWorkoutActivity" >
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+    
+      <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Previous Workouts:" />
+        android:layout_alignTop="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:text="Here are your previous workouts" />
+    
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+    
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/preWorkout"
+        android:layout_centerVertical="true"
+        android:onClick="onViewClick"
+        android:text="View" />
+
+    <Button
+        android:id="@+id/preWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:onClick="onBackButtonClick"
+        android:text="Back" />
 
 </RelativeLayout>

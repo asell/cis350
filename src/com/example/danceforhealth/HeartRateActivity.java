@@ -3,6 +3,7 @@ package com.example.danceforhealth;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -11,6 +12,8 @@ public class HeartRateActivity extends Activity {
 	
 	TextView tv;
 	CountDownTimer timer;
+	private Workout w;
+	private int heartrate;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,10 @@ public class HeartRateActivity extends Activity {
                 tv.setText("done!");
             }
          };
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+		    w = (Workout) extras.get("workout");
+		}
 	}
 
 	@Override
@@ -39,25 +46,17 @@ public class HeartRateActivity extends Activity {
 	public void startTimer(View view) {
 		timer.start();
 	}
-//	public class MyTimer extends CountDownTimer {
-//        public MyTimer(long millisInFuture, long countDownInterval) {
-//            super(millisInFuture, countDownInterval);
-//            // TODO Auto-generated constructor stub
-//            //tv.setText("changed by the constructor");
-//        }
-//
-//        @Override
-//        public void onFinish() {
-//            // TODO Auto-generated method stub
-//            tv.setText("done!");
-//        }
-//
-//        @Override
-//        public void onTick(long millisUntilFinished) {
-//            // TODO Auto-generated method stub
-//            tv.setText("Time: " + millisUntilFinished);
-//        }
+	
+	public void onNextButtonClick(View view) {
+		
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, WorkoutSummary.class);
+		//.putExtra("workout", w);
 
-    //}
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
+	}
 
 }

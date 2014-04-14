@@ -63,7 +63,19 @@
 		    android:layout_width="fill_parent"
 		    android:layout_height="fill_parent"
 		    android:layout_weight="1" />-->
+		    
+		    <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/stepOneView"
+                android:layout_alignLeft="@+id/stepOneView"
+                android:layout_marginBottom="32dp"
+                android:onClick="onNextButtonClick"
+                android:text="View Workout Summary" />
     
     </LinearLayout>
+
+            
 
 </RelativeLayout>
