@@ -31,4 +31,18 @@
         android:onClick="onNextButtonClick"
         android:text="@string/next" />
 
+<<<<<<< HEAD
 </RelativeLayout>
+=======
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/stepOneView"
+                android:layout_alignLeft="@+id/stepOneView"
+                android:layout_marginBottom="32dp"
+                android:onClick="onNextButtonClick"
+                android:text="View Workout Summary" />
+
+</RelativeLayout>
+>>>>>>> upstream/master

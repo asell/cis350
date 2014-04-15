@@ -33,8 +33,6 @@ public class PrevWorkoutActivity extends Activity {
 		
 		view = (Button) findViewById(R.id.button1); 
 		
-
-
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
 

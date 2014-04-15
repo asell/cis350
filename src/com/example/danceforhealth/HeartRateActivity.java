@@ -31,7 +31,8 @@ public class HeartRateActivity extends Activity {
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created
-		Intent i = new Intent(this, WorkoutSummary.class).putExtra("workout", w);
+		Intent i = new Intent(this, WorkoutSummary.class);
+		//.putExtra("workout", w);
 
 		// pass the Intent to the Activity, 
 		// using the specified request code
