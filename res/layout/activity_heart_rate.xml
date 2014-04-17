@@ -23,58 +23,20 @@
 		       android:layout_height="wrap_content"
 		       android:text="1. Using your index and middle fingers, locate your pulse on your wrist, right below your thumb (you should be able to feel a beat)"/>
         
-		   <ImageView
-		        android:id="@+id/imageView1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:src="@drawable/hr" />
+		<ImageView
+		      android:id="@+id/imageView1"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:src="@drawable/hr" />
+		
+		<Button
+              android:id="@+id/button1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:onClick="onNextButtonClick"
+              android:text="Next Page" />
 		   
-		   <TextView
-		       android:layout_width="wrap_content"
-		       android:layout_height="wrap_content"
-		       android:text="2. Start the 15 second timer and count how many times your pulse beats until the timer ends"/>
-		   
-		   <LinearLayout
-       			android:layout_width="fill_parent"
-        		android:layout_height="wrap_content"
-        		android:orientation="horizontal" >
-			   
-			   <Button android:id="@+id/timer"
-	    	   	   android:text="Start Timer"
-	    	   	   android:layout_width="wrap_content"
-	    	  	   android:layout_height="wrap_content" 
-	    	   	   android:onClick="startTimer" />
-		   
-			   <TextView 
-			       android:id="@+id/timerText"
-			       android:layout_width="wrap_content"
-			       android:layout_height="wrap_content"
-			       android:text="Time left: 15"/>
-			   
-			</LinearLayout>
-		   
-		   <TextView
-		       android:layout_width="wrap_content"
-		       android:layout_height="wrap_content"
-		       android:text="3. Plug in the number of beats, then multiply that number by 4" />
-		   
-		  <!--<com.example.danceforhealth.StepOneView
-		    android:id="@+id/stepOneView"
-		    android:layout_width="fill_parent"
-		    android:layout_height="fill_parent"
-		    android:layout_weight="1" />-->
-		    
-		    <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/stepOneView"
-                android:layout_alignLeft="@+id/stepOneView"
-                android:layout_marginBottom="32dp"
-                android:onClick="onNextButtonClick"
-                android:text="View Workout Summary" />
-    
-    </LinearLayout>
+		</LinearLayout>
 
             
 

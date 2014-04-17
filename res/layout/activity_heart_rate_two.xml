@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".HeartRateTwo" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    	
+    	<TextView
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:text="2. Start the 15 second timer and count how many times your pulse beats until the timer ends"/>
+		   
+		   <LinearLayout
+       			android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal" >
+			   
+			   <Button android:id="@+id/timer"
+	    	   	   android:text="Start Timer"
+	    	   	   android:layout_width="wrap_content"
+	    	  	   android:layout_height="wrap_content" 
+	    	   	   android:onClick="startTimer" />
+		   
+			   <TextView 
+			       android:id="@+id/timerText"
+			       android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+			       android:text="Time left: 15"/>
+			   
+			</LinearLayout>
+		   
+		   <TextView
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:text="3. Plug in the number of beats, then multiply that number by 4" />
+		    
+		    <EditText
+    			android:id="@+id/hr_input"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:hint="enter number of beats"
+    			android:inputType="number"
+     			android:imeOptions="actionSend" />
+<!--     			android:imeActionLabel="Calculate Heart Rate!" /> -->
+
+			<Button
+			    android:id="@+id/hr_input_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onHRButtonClick"
+                android:text="Calculate Heart Rate!" />
+			
+			<TextView 
+			       android:id="@+id/hrText"
+			       android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+			       android:text="\nYour heart rate is: 0\n"/>
+		    
+		    <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNextButtonClick"
+                android:text="View Workout Summary" />
+<!--                 android:layout_alignBottom="@+id/stepOneView" -->
+<!--                 android:layout_alignLeft="@+id/stepOneView" -->
+<!--                 android:layout_marginBottom="32dp" -->
+    
+    </LinearLayout>
+
+</RelativeLayout>
