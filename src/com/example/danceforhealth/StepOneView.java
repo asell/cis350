@@ -23,13 +23,13 @@ public class StepOneView extends View {
 		//setBackgroundColor(0xFF00FF00);
 		
 		// create the image of the unicorn
-		//image = BitmapFactory.decodeResource(getResources(), R.drawable.heartrate1);
+		//image = BitmapFactory.decodeResource(getResources(), R.drawable.hr);
 		//image = Bitmap.createScaledBitmap(image, 150, 150, false);
 	}
 	
 	public void onDraw(Canvas c) {
 		/* called each time this View is drawn */
-		canvas = c;
+		//canvas = c;
 	}
 	
 	public boolean onTouchEvent(MotionEvent e) {

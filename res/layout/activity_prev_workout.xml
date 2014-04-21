@@ -51,6 +51,4 @@
         android:onClick="onBackButtonClick"
         android:text="Back" />
 
-
-
 </RelativeLayout>

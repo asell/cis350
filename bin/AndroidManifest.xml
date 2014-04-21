@@ -62,8 +62,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.danceforhealth.DummyActivity"></activity>
-        <activity android:name="com.example.danceforhealth.WorkoutSummary"></activity>
     </application>
 
 </manifest>
