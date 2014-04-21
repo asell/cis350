@@ -1,5 +1,7 @@
 package com.example.danceforhealth;
 
+import java.util.List;
+
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
@@ -64,9 +66,17 @@ public class HeartRateTwo extends Activity {
 	
 	public void onNextButtonClick(View view) {
 		
+
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+		
+		all.add(w);
+		
 		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, WorkoutSummary.class);
+		
+		
 		//.putExtra("workout", w);
 
 		// pass the Intent to the Activity, 
