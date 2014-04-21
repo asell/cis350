@@ -36,9 +36,15 @@ public class WeightAndStepsActivity extends Activity{
 			steps = Integer.parseInt(et1.getText().toString());
 			w.setSteps(steps);
 		}
+		else {
+			w.setSteps(0);
+		}
 		if(!et2.getText().toString().trim().equals("")) {
 			weight = Integer.parseInt(et2.getText().toString());
 			w.setWeight(weight);
+		}
+		else {
+			w.setWeight(0);
 		}
 		
 		

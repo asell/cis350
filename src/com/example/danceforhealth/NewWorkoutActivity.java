@@ -44,15 +44,6 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		return true;
 	}
 	
-	public void onHRButtonClick(View view) {
-		// create an Intent using the current Activity 
-		// and the Class to be created
-		Intent i = new Intent(this, HeartRateActivity.class);
-
-		// pass the Intent to the Activity, 
-		// using the specified request code
-		startActivity(i);
-	}
 	
 	public void onNextButtonClick(View view) {
 			w.setType(selection);
