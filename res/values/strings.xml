@@ -18,6 +18,7 @@
     <string name="six">6</string>
     <string name="seven">7</string>
     <string name="next">Next</string>
+
     <string-array name="workouts_array">
         <item>Dance</item>
         <item>Run</item>
@@ -26,5 +27,7 @@
         <item>Swim</item>
         <item>Other</item>
     </string-array>
+
+    <string name="title_activity_heart_rate_two">Measure Your Heart Rate Part Two</string>
 
 </resources>
