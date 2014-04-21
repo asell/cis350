@@ -8,31 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".HeartRateActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="How to take your heart rate:\n\n1. Using your index and middle fingers, locate your pulse on your wrist, right below your thumb (you should be able to feel a beat)\n\n2. Start the 15 second timer\n\n3. Count how many times your pulse beats until the timer ends\n\n4. Plug in the number of beats, then multiply that number by 4\n" />
-
-    <com.example.danceforhealth.StepOneView
-        android:id="@+id/stepOneView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_weight="1" />
-
-    <Button
-        android:id="@+id/next27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:onClick="onNextButtonClick"
-        android:text="@string/next" />
-
-</RelativeLayout>
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -60,53 +35,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/custom_button"
             android:onClick="onNextButtonClick"
-            android:text="Next Page" />
+            android:text="Next Page" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2. Start the 15 second timer and count how many times your pulse beats until the timer ends" />
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/timer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="startTimer"
-                android:text="Start Timer" />
-
-            <TextView
-                android:id="@+id/timerText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Time left: 15" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3. Plug in the number of beats, then multiply that number by 4" />
-
-        <!--
-            <com.example.danceforhealth.StepOneView
-		    android:id="@+id/stepOneView"
-		    android:layout_width="fill_parent"
-		    android:layout_height="fill_parent"
-		    android:layout_weight="1" />
-        -->
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/stepOneView"
-            android:layout_alignLeft="@+id/stepOneView"
-            android:layout_marginBottom="32dp"
-            android:onClick="onNextButtonClick"
-            android:text="View Workout Summary" />
+      
     </LinearLayout>
 
+</RelativeLayout>
