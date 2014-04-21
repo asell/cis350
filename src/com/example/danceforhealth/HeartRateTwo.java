@@ -32,14 +32,14 @@ public class HeartRateTwo extends Activity {
             	} else if (millisUntilFinished > 16000) {
             		tv.setText("Set?");
             	} else if (millisUntilFinished > 15000) {
-            		tv.setText("Go!");
+            		tv.setText("Start Counting!");
             	} else {
             		tv.setText("Time left: " + millisUntilFinished / 1000);
             	}
             }
 
             public void onFinish() {
-                tv.setText("done!");
+                tv.setText("Stop Counting!");
             }
          };
  		
@@ -49,17 +49,6 @@ public class HeartRateTwo extends Activity {
  		}
  		
 		et = (EditText) findViewById(R.id.hr_input);
-//		et.setOnKeyListener(new OnKeyListener() {
-//		    @Override
-//		    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-//		        boolean handled = false;
-//		        if (actionId == EditorInfo.IME_ACTION_SEND) {
-//		            onHRButtonClick();
-//		            handled = true;
-//		        }
-//		        return handled;
-//		    }
-//		});
 	}
 
 	@Override

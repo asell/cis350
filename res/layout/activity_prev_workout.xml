@@ -32,8 +32,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp" />
     
-        <Button
+    <Button
         android:id="@+id/button1"
+        android:background="@drawable/custom_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/preWorkout"
@@ -43,6 +44,7 @@
 
     <Button
         android:id="@+id/preWorkout"
+        android:background="@drawable/custom_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

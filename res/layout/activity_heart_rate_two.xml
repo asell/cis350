@@ -16,7 +16,7 @@
     	<TextView
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
-		       android:text="2. Start the 15 second timer and count how many times your pulse beats until the timer ends"/>
+		       android:text="2. Start the timer and count how many times your pulse beats until the timer ends"/>
 		   
 		   <LinearLayout
        			android:layout_width="fill_parent"
@@ -25,6 +25,7 @@
 			   
 			   <Button android:id="@+id/timer"
 	    	   	   android:text="Start Timer"
+              	   android:background="@drawable/custom_button"
 	    	   	   android:layout_width="wrap_content"
 	    	  	   android:layout_height="wrap_content" 
 	    	   	   android:onClick="startTimer" />
@@ -33,6 +34,7 @@
 			       android:id="@+id/timerText"
 			       android:layout_width="wrap_content"
 			       android:layout_height="wrap_content"
+        		   android:textSize="30sp"
 			       android:text="Time left: 15"/>
 			   
 			</LinearLayout>
@@ -40,7 +42,7 @@
 		   <TextView
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
-		       android:text="3. Plug in the number of beats, then multiply that number by 4" />
+		       android:text="3. Plug in the number of beats that you counted and then click the button to calculate your heart rate" />
 		    
 		    <EditText
     			android:id="@+id/hr_input"
@@ -49,10 +51,10 @@
     			android:hint="enter number of beats"
     			android:inputType="number"
      			android:imeOptions="actionSend" />
-<!--     			android:imeActionLabel="Calculate Heart Rate!" /> -->
 
 			<Button
 			    android:id="@+id/hr_input_button"
+                android:background="@drawable/custom_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onHRButtonClick"
@@ -62,17 +64,16 @@
 			       android:id="@+id/hrText"
 			       android:layout_width="wrap_content"
 			       android:layout_height="wrap_content"
+        		   android:textSize="30sp"
 			       android:text="\nYour heart rate is: 0\n"/>
 		    
 		    <Button
                 android:id="@+id/button1"
+                android:background="@drawable/custom_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onNextButtonClick"
                 android:text="View Workout Summary" />
-<!--                 android:layout_alignBottom="@+id/stepOneView" -->
-<!--                 android:layout_alignLeft="@+id/stepOneView" -->
-<!--                 android:layout_marginBottom="32dp" -->
     
     </LinearLayout>
 
