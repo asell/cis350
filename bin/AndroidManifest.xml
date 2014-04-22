@@ -47,11 +47,6 @@
         <activity
             android:name="com.example.danceforhealth.RatingActivity"
             android:label="@string/title_activity_rating" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.danceforhealth.WeightAndStepsActivity"
@@ -66,6 +61,8 @@
             android:name="com.example.danceforhealth.HeartRateTwo"
             android:label="@string/title_activity_heart_rate_two" >
         </activity>
+        <activity android:name="com.example.danceforhealth.DummyActivity"></activity>
+        <activity android:name="com.example.danceforhealth.WorkoutSummary"></activity>
     </application>
 
 </manifest>

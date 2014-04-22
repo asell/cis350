@@ -9,6 +9,7 @@
     tools:context=".HomeActivity" >
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -18,29 +19,39 @@
             android:layout_height="wrap_content"
             android:text="Welcome to the Dance for Health App!" />
 
-        <Button
-            android:id="@+id/newWorkout"
-            android:background="@drawable/custom_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onNewButtonClick"
-            android:text="New Workout" />
-
-        <Button
-            android:id="@+id/preWorkout"
-            android:background="@drawable/custom_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onPrevButtonClick"
-            android:text="Previous Workouts" />
-
-        <Button
-            android:id="@+id/dummy"
-            android:background="@drawable/custom_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onDummyClick"
-            android:text="TEST ME" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/dummy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/custom_button"
+        android:onClick="onDummyClick"
+        android:text="TEST ME" />
+
+    <Button
+        android:id="@+id/preWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dummy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/custom_button"
+        android:onClick="onPrevButtonClick"
+        android:text="Previous Workouts" />
+
+    <Button
+        android:id="@+id/newWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/preWorkout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_button"
+        android:onClick="onNewButtonClick"
+        android:text="New Workout" />
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.example.danceforhealth;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.os.Parcel;
@@ -29,8 +30,9 @@ public class Workout implements Parcelable {
 		this.steps = st;
 		this.weight = wt;
 		Date date = new Date();
-		this.date = date.toString();
-		
+		 SimpleDateFormat ft = 
+			      new SimpleDateFormat ("E M dd yyyy");
+		 this.date = ft.format(date);
 	}
 	
 	public Workout(Parcel p) {
@@ -95,7 +97,7 @@ public class Workout implements Parcelable {
 	}
 	
 	public String toString() {
-		return (this.getType() + "\n" + this.getDate());
+		return (this.getType() + " on \n" + this.getDate());
 	}
 	
 	public static final Parcelable.Creator<Workout> CREATOR = new Creator<Workout>() {
