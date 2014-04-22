@@ -5,12 +5,14 @@ import com.example.danceforhealth.R;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 
 public class DummyActivity extends Activity {
@@ -24,7 +26,11 @@ public class DummyActivity extends Activity {
 		
 		createWorkout();
 		
-		
+		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
+		TextView txt = (TextView) findViewById(R.id.textView1);
+		Button b = (Button) findViewById(R.id.preWorkout);
+		txt.setTypeface(font);
+		b.setTypeface(font);
 	}
 
 	@Override
