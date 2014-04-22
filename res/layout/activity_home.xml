@@ -2,11 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/heart"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/heart"
     tools:context=".HomeActivity" >
 
     <LinearLayout
@@ -20,10 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="40sp"
-            android:text="Welcome to the Dance for Health App!\n" />
-
-<<<<<<< HEAD
+            android:text="Welcome to the Dance for Health App!\n"
+            android:textSize="40sp" />
     </LinearLayout>
 
     <Button
@@ -58,35 +56,5 @@
         android:background="@drawable/custom_button"
         android:onClick="onNewButtonClick"
         android:text="New Workout" />
-=======
-        <Button
-            android:id="@+id/newWorkout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/custom_button"
-            android:onClick="onNewButtonClick"
-            android:text="New Workout" />
-
-        <Button
-            android:id="@+id/preWorkout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/custom_button"
-            android:onClick="onPrevButtonClick"
-            android:text="Previous Workouts" />
-
-        <Button
-            android:id="@+id/dummy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/custom_button"
-            android:onClick="onDummyClick"
-            android:text="TEST ME" />
-
-    </LinearLayout>
->>>>>>> fa865e0d6b62033fd673777119e644f7405175ae
 
 </RelativeLayout>

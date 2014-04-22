@@ -14,13 +14,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-<<<<<<< HEAD
+
 
         <TextView
+            android:id="@+id/Header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/linearLayout1"
-            android:layout_centerHorizontal="true"
             android:text="Here is the summary of your workout: " />
 
         <TextView
@@ -52,58 +51,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="And your Heartrate was: " />
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
-=======
 
-    <TextView
-        android:id="@+id/textView1"
->>>>>>> fa865e0d6b62033fd673777119e644f7405175ae
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-<<<<<<< HEAD
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/custom_button"
-        android:onClick="onHomeClick"
-        android:text="Home" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28dp"
         android:background="@drawable/custom_button"
         android:onClick="onUpdateButtonClick"
         android:text="Update Workout" />
-
-</RelativeLayout>
-=======
-        android:text="Here is the summary of your workout: " />
-
-      <Button
-          android:id="@+id/button1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@+id/linearLayout1"
-          android:layout_centerHorizontal="true"
-          android:layout_gravity="center_horizontal"
-          android:layout_marginTop="28dp"
-          android:background="@drawable/custom_button"
-          android:onClick="onUpdateButtonClick"
-          android:text="Update Workout" />
 
       <Button
           android:id="@+id/button2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignParentBottom="true"
-          android:layout_centerHorizontal="true"
           android:layout_gravity="center_horizontal"
           android:layout_marginBottom="39dp"
           android:background="@drawable/custom_button"
@@ -113,4 +77,3 @@
     </LinearLayout>
 
 </RelativeLayout>
->>>>>>> fa865e0d6b62033fd673777119e644f7405175ae
