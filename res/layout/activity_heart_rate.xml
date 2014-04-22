@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/heart"
     tools:context=".HeartRateActivity" >
 
     <LinearLayout
@@ -14,11 +15,13 @@
         android:orientation="vertical" >
     
         <TextView
+               android:id="@+id/custom_font_two"
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
 		       android:text="How to take your heart rate:"/>
         
         <TextView
+               android:id="@+id/textView1"
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
 		       android:text="1. Using your index and middle fingers, locate your pulse on your wrist, right below your thumb (you should be able to feel a beat)"/>
@@ -30,12 +33,13 @@
 		      android:src="@drawable/hr" />
 		
 		<Button
-              android:id="@+id/button1"
-              android:background="@drawable/custom_button"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:onClick="onNextButtonClick"
-              android:text="Next Page" />
+		    android:id="@+id/button1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_horizontal"
+		    android:background="@drawable/custom_button"
+		    android:onClick="onNextButtonClick"
+		    android:text="Next Page" />
 		   
 		</LinearLayout>
 

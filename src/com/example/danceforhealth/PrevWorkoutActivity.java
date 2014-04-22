@@ -9,6 +9,7 @@ import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -20,6 +21,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.TextView;
 
 public class PrevWorkoutActivity extends Activity {
 	
@@ -31,7 +33,14 @@ public class PrevWorkoutActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_prev_workout);
 		
+		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
+		TextView txt1 = (TextView) findViewById(R.id.textView1);
+		Button b = (Button) findViewById(R.id.preWorkout);
+		txt1.setTypeface(font);
+		b.setTypeface(font);
+		
 		view = (Button) findViewById(R.id.button1); 
+		view.setTypeface(font);
 		
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();

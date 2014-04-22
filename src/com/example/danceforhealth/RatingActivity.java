@@ -2,9 +2,12 @@ package com.example.danceforhealth;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class RatingActivity extends Activity{
@@ -18,6 +21,22 @@ public class RatingActivity extends Activity{
 		if (extras != null) {
 		    w = (Workout) extras.get("workout");
 		}
+		
+		TextView tv1 = (TextView) findViewById(R.id.textView1);
+		TextView tv2 = (TextView) findViewById(R.id.textView2);
+		TextView tv3 = (TextView) findViewById(R.id.textView3);
+		TextView tv4 = (TextView) findViewById(R.id.textView4);
+		TextView tv5 = (TextView) findViewById(R.id.textView5);
+		TextView tv6 = (TextView) findViewById(R.id.textView6);
+		Button b = (Button) findViewById(R.id.button1);
+		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
+		tv1.setTypeface(font);
+		tv2.setTypeface(font);
+		tv3.setTypeface(font);
+		tv4.setTypeface(font);
+		tv5.setTypeface(font);
+		tv6.setTypeface(font);
+		b.setTypeface(font);
 	}
 	
 	@Override

@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/heart"
     tools:context=".PrevWorkoutActivity" >
 
     <LinearLayout
@@ -13,9 +14,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-    </LinearLayout>
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/linearLayout1"
@@ -24,24 +25,28 @@
 
       <Button
           android:id="@+id/button1"
-          android:background="@drawable/custom_button"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_below="@+id/linearLayout1"
           android:layout_centerHorizontal="true"
+          android:layout_gravity="center_horizontal"
           android:layout_marginTop="28dp"
+          android:background="@drawable/custom_button"
           android:onClick="onUpdateButtonClick"
           android:text="Update Workout" />
 
       <Button
           android:id="@+id/button2"
-          android:background="@drawable/custom_button"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignParentBottom="true"
           android:layout_centerHorizontal="true"
+          android:layout_gravity="center_horizontal"
           android:layout_marginBottom="39dp"
+          android:background="@drawable/custom_button"
           android:onClick="onHomeClick"
           android:text="Home" />
+      
+    </LinearLayout>
 
 </RelativeLayout>
