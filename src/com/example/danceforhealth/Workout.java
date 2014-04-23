@@ -13,7 +13,7 @@ public class Workout implements Parcelable {
 	private int steps;
 	private int weight;
 	private String date;
-	
+
 	public Workout() {
 		type = "";
 		strain = 0;
@@ -21,11 +21,12 @@ public class Workout implements Parcelable {
 		steps = 0;
 		weight = 0;
 		Date date = new Date();
-		 SimpleDateFormat ft = 
-			      new SimpleDateFormat ("E M dd yyyy");
-		 this.date = ft.format(date);
+		SimpleDateFormat ft = 
+				new SimpleDateFormat ("E M dd yyyy");
+		this.date = ft.format(date);
+		System.out.println(date);
 	}
-	
+
 	public Workout(String type, int strain, int hr, int st, int wt) {
 		this.type = type;
 		this.strain = strain;
@@ -33,20 +34,20 @@ public class Workout implements Parcelable {
 		this.steps = st;
 		this.weight = wt;
 		Date date = new Date();
-		 SimpleDateFormat ft = 
-			      new SimpleDateFormat ("E M dd yyyy");
-		 this.date = ft.format(date);
+		SimpleDateFormat ft = 
+				new SimpleDateFormat ("E M dd yyyy");
+		this.date = ft.format(date);
 	}
-	
+
 	public Workout(Parcel p) {
 		setType(p.readString());
 		setStrain(p.readInt());
 		setHeartrate(p.readInt());
 		setSteps(p.readInt());
 		setWeight(p.readInt());
-		
+
 	}
-	
+
 	public String getDate() {
 		return date;
 	}
@@ -54,19 +55,19 @@ public class Workout implements Parcelable {
 	public String getType() {
 		return type;
 	}
-	
+
 	public int getStrain() {
 		return strain;
 	}
-	
+
 	public int getHR() {
 		return heartrate;
 	}
-	
+
 	public int getSteps() {
 		return steps;
 	}
-	
+
 	public int getWeight() {
 		return weight;
 	}
@@ -94,21 +95,21 @@ public class Workout implements Parcelable {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
-	
+
 	public String toString() {
 		return (this.getType() + " on \n" + this.getDate());
 	}
-	
+
 	public static final Parcelable.Creator<Workout> CREATOR = new Creator<Workout>() {
 		public Workout createFromParcel(Parcel source) {
 
-	        return new Workout(source);
-	    }
+			return new Workout(source);
+		}
 
-	    public Workout[] newArray(int size) {
+		public Workout[] newArray(int size) {
 
-	        return new Workout[size];
-	    }
+			return new Workout[size];
+		}
 
 	};
 
@@ -121,13 +122,13 @@ public class Workout implements Parcelable {
 
 	@Override
 	public void writeToParcel(Parcel parcel, int flags) {
-		
+
 		parcel.writeString(getType());
 		parcel.writeInt(getStrain());
 		parcel.writeInt(getHR());
 		parcel.writeInt(getSteps());
 		parcel.writeInt(getWeight());
-		
+
 	}
 
 }

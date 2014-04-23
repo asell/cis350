@@ -26,15 +26,11 @@ public class MySimpleArrayAdapter extends ArrayAdapter<Workout> {
 		TextView textView = (TextView) rowView.findViewById(R.id.secondLine);
 		TextView type = (TextView) rowView.findViewById(R.id.firstLine);
 		ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+		//imageView.setImageResource(R.drawable.heart); // this should be changed!!
 		textView.setText(values[position].getDate());
 		type.setText(values[position].getType());
 		// Change the icon for Windows and iPhone
 		int feeling = values[position].getStrain();
-		if (feeling == 0) {
-			imageView.setImageResource(R.drawable.heart);
-		} else {
-			imageView.setImageResource(R.drawable.hr);
-		}
 
 		return rowView;
 	}
