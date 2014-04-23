@@ -22,7 +22,7 @@ public class WorkoutSummary extends Activity{
 			workout = b.getParcelable("this is the selected workout");
 
 		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
-		TextView txt = (TextView) findViewById(R.id.textView1);
+		TextView txt = (TextView) findViewById(R.id.Header);
 		Button b1 = (Button) findViewById(R.id.button1);
 		Button b2 = (Button) findViewById(R.id.button2);
 		txt.setTypeface(font);
