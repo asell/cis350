@@ -61,8 +61,14 @@
             android:name="com.example.danceforhealth.HeartRateTwo"
             android:label="@string/title_activity_heart_rate_two" >
         </activity>
-        <activity android:name="com.example.danceforhealth.DummyActivity"></activity>
-        <activity android:name="com.example.danceforhealth.WorkoutSummary"></activity>
+        <activity android:name="com.example.danceforhealth.DummyActivity" >
+        </activity>
+        <activity android:name="com.example.danceforhealth.WorkoutSummary" >
+        </activity>
+        <activity
+            android:name="com.example.danceforhealth.GraphActivity"
+            android:label="@string/title_activity_graph" >
+        </activity>
     </application>
 
 </manifest>
