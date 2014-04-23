@@ -48,8 +48,10 @@ public class RatingActivity extends Activity{
 	
 	public void onNextButtonClick(View view) {
 		
+		
 			// create an Intent using the current Activity 
 			// and the Class to be created
+			w.setStrain(0); // temporary until we have an algorithm for this
 			Intent i = new Intent(this, WeightAndStepsActivity.class).putExtra("workout", w);
 	
 			// pass the Intent to the Activity, 

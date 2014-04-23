@@ -68,7 +68,7 @@ public class PrevWorkoutActivity extends Activity {
 				
 				Intent i = new Intent();
 				Bundle b = new Bundle();
-				b.putParcelable("this is the selected workout", selected);
+				b.putParcelable("workout", selected);
 				i.putExtras(b);
 			
 				i.setClass(v.getContext(), WorkoutSummary.class);
