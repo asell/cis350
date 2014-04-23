@@ -5,11 +5,13 @@ import java.util.List;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -31,10 +33,16 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
 		
+<<<<<<< HEAD
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
 		all.add(w);
 		selection = "Dance";
+=======
+		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
+		Button b = (Button) findViewById(R.id.button1);
+		b.setTypeface(font);
+>>>>>>> upstream/master
 	}
 	
 	@Override

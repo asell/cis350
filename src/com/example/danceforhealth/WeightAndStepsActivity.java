@@ -2,10 +2,13 @@ package com.example.danceforhealth;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class WeightAndStepsActivity extends Activity{
@@ -20,6 +23,18 @@ public class WeightAndStepsActivity extends Activity{
 		if (extras != null) {
 		    w = (Workout) extras.get("workout");
 		}
+		
+		TextView txt1 = (TextView) findViewById(R.id.textView1);
+		EditText etxt1 = (EditText) findViewById(R.id.editText1);
+		TextView txt2 = (TextView) findViewById(R.id.textView2);
+		EditText etxt2 = (EditText) findViewById(R.id.editText2);
+		Button b = (Button) findViewById(R.id.button1);
+		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
+		txt1.setTypeface(font);
+		etxt1.setTypeface(font);
+		txt2.setTypeface(font);
+		etxt2.setTypeface(font);
+		b.setTypeface(font);
 	}
 	
 	@Override
@@ -42,10 +57,14 @@ public class WeightAndStepsActivity extends Activity{
 		if(!et2.getText().toString().trim().equals("")) {
 			weight = Integer.parseInt(et2.getText().toString());
 			w.setWeight(weight);
+<<<<<<< HEAD
 		}
 		else {
 			w.setWeight(0);
 		}
+=======
+		} 
+>>>>>>> upstream/master
 		
 		
 	

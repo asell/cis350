@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/heart"
     tools:context=".HeartRateTwo" >
 
     <LinearLayout
@@ -14,6 +15,7 @@
         android:orientation="vertical" >
     	
     	<TextView
+    	       android:id="@+id/textView1"
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
 		       android:text="2. Start the timer and count how many times your pulse beats until the timer ends"/>
@@ -34,12 +36,13 @@
 			       android:id="@+id/timerText"
 			       android:layout_width="wrap_content"
 			       android:layout_height="wrap_content"
-        		   android:textSize="30sp"
+        		   android:textSize="20sp"
 			       android:text="Time left: 15"/>
 			   
 			</LinearLayout>
 		   
 		   <TextView
+    	       android:id="@+id/textView2"
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
 		       android:text="3. Plug in the number of beats that you counted and then click the button to calculate your heart rate" />
@@ -54,11 +57,12 @@
 
 			<Button
 			    android:id="@+id/hr_input_button"
-                android:background="@drawable/custom_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onHRButtonClick"
-                android:text="Calculate Heart Rate!" />
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_horizontal"
+			    android:background="@drawable/custom_button"
+			    android:onClick="onHRButtonClick"
+			    android:text="Calculate Heart Rate!" />
 			
 			<TextView 
 			       android:id="@+id/hrText"
@@ -68,12 +72,13 @@
 			       android:text="\nYour heart rate is: 0\n"/>
 		    
 		    <Button
-                android:id="@+id/button1"
-                android:background="@drawable/custom_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onNextButtonClick"
-                android:text="View Workout Summary" />
+		        android:id="@+id/button1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_horizontal"
+		        android:background="@drawable/custom_button"
+		        android:onClick="onNextButtonClick"
+		        android:text="View Workout Summary" />
     
     </LinearLayout>
 

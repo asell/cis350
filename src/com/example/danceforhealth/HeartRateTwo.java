@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnKeyListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,8 +26,10 @@ public class HeartRateTwo extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_heart_rate_two);
+		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
 		
 		tv = (TextView)findViewById(R.id.timerText);
+		tv.setTypeface(font);
         timer = new CountDownTimer(18000, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -51,6 +55,20 @@ public class HeartRateTwo extends Activity {
  		}
  		
 		et = (EditText) findViewById(R.id.hr_input);
+		
+		TextView txt1 = (TextView) findViewById(R.id.textView1);
+		Button b = (Button) findViewById(R.id.timer);
+		TextView txt2 = (TextView) findViewById(R.id.textView2);
+		Button b1 = (Button) findViewById(R.id.hr_input_button);
+		TextView txt3 = (TextView) findViewById(R.id.hrText);
+		Button b2 = (Button) findViewById(R.id.button1);
+		txt1.setTypeface(font);
+		txt2.setTypeface(font);
+		txt3.setTypeface(font);
+		et.setTypeface(font);
+		b.setTypeface(font);
+		b1.setTypeface(font);
+		b2.setTypeface(font);
 	}
 
 	@Override
@@ -74,7 +92,7 @@ public class HeartRateTwo extends Activity {
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created
-		Intent i = new Intent(this, WorkoutSummary.class);
+		Intent i = new Intent(this, WorkoutSummary.class).putExtra("workout", w);
 		
 		
 		//.putExtra("workout", w);
@@ -89,6 +107,7 @@ public class HeartRateTwo extends Activity {
 		String input = et.getText().toString();
 		int numIn = Integer.parseInt(input) * 4;
 		t.setText("\nYour heart rate is: " + numIn + "\n");
+		w.setHeartrate(numIn);
 	}
 
 }
