@@ -29,5 +29,6 @@
     </string-array>
 
     <string name="title_activity_heart_rate_two">Measure Your Heart Rate Part Two</string>
+    <string name="title_activity_graph">GraphActivity</string>
 
 </resources>
