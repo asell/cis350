@@ -69,6 +69,7 @@
             android:name="com.example.danceforhealth.GraphActivity"
             android:label="@string/title_activity_graph" >
         </activity>
+        <activity android:name="com.example.danceforhealth.MyListActivity"></activity>
     </application>
 
 </manifest>

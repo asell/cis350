@@ -1,3 +1,4 @@
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,14 +10,14 @@
     android:background="@drawable/heart"
     tools:context=".PrevWorkoutActivity" >
 
-    <LinearLayout
+<!--     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-    </LinearLayout>
-    
+    </LinearLayout> -->
+    <ListView >
       <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -24,8 +25,13 @@
         android:layout_alignTop="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
         android:text="Here are your previous workouts" />
+      
+      <ListView >
+          
+          
+      </ListView>
     
-
+<!-- 
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"
@@ -33,8 +39,8 @@
         android:layout_below="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp" />
-    
-    <Button
+     -->
+  <!--   <Button
         android:id="@+id/button1"
         android:background="@drawable/custom_button"
         android:layout_width="wrap_content"
@@ -42,7 +48,7 @@
         android:layout_alignLeft="@+id/preWorkout"
         android:layout_centerVertical="true"
         android:onClick="onViewClick"
-        android:text="View" />
+        android:text="View" /> -->
 
     <Button
         android:id="@+id/preWorkout"
@@ -54,5 +60,7 @@
         android:layout_marginBottom="28dp"
         android:onClick="onBackButtonClick"
         android:text="Back" />
+    
+    </ListView>
 
 </RelativeLayout>
