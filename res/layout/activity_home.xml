@@ -19,8 +19,9 @@
             android:id="@+id/custom_font"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+        	android:layout_marginBottom="15dp"
             android:gravity="center"
-            android:text="Welcome to the Dance for Health App!\n"
+            android:text="Welcome to the Dance for Health App!"
             android:textSize="40sp" />
 
     <Button

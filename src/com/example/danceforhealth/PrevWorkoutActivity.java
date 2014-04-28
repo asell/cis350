@@ -6,10 +6,13 @@ import java.util.List;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PrevWorkoutActivity extends ListActivity {
@@ -34,6 +37,13 @@ public class PrevWorkoutActivity extends ListActivity {
     // use your custom layout
     ArrayAdapter<Workout> adapter = new MySimpleArrayAdapter(this, values);
     setListAdapter(adapter);
+    
+    // set font
+	Typeface font_two = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
+	TextView t = (TextView) findViewById(R.id.textView1);
+	Button b = (Button) findViewById(R.id.preWorkout);
+	t.setTypeface(font_two);
+	b.setTypeface(font_two);
   }
   
 	public void onBackButtonClick(View view) {

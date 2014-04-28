@@ -16,6 +16,7 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
+		// set fonts
 		TextView txt = (TextView) findViewById(R.id.custom_font);
 		Button btn = (Button) findViewById(R.id.newWorkout);
 		Button pw = (Button) findViewById(R.id.preWorkout);
