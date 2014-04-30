@@ -1,6 +1,10 @@
 package com.example.danceforhealth;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
 import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.LineAndPointFormatter;
@@ -29,12 +33,46 @@ public class YearProgressActivity extends Activity {
 		// initialize our XYPlot reference:
         plot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
  
-        // Create a couple arrays of y-values to plot:
-        Number[] series1Numbers = {0, 130, 125, 127, 127, 120, 124, 123, 130, 125, 127, 127, 120};
+     // Get previous workouts
+    	PrevWorkout pw = PrevWorkout.getInstance();
+    	List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
+ 
+        // get current date and month
+        Date d = new Date();
+        SimpleDateFormat ft = 
+				new SimpleDateFormat ("E M dd yyyy");
+		String current = ft.format(d);
+		String[] temp = current.toString().split(" ");
+		int currentMonth = Integer.parseInt(temp[2]);
+		String currentYear = temp[3];
+		
+		int count = 0;
+		Number[] values = new Number[13];
+		for (Workout w : workouts) {
+			String[] date = w.getDate().split(" ");
+    		int month = Integer.parseInt(date[1]);
+    		String year = date[3];
+    		if (year.equals(currentYear)) {
+    			values[month] = w.getWeight();
+    			count++;
+    		}
+		}
+		
+		if ((count < currentMonth) && (workouts.size() > count)) {
+    		int base = workouts.get(count-1).getWeight();
+    		boolean toggle = true;
+    		for (int i = 1; i < values.length; i++) {
+    			if ((Integer)values[i] == null) {
+    				if (toggle) values[i] = base;
+    				else values[i] = values[i-1];
+    			}
+    			else toggle = false;
+    		}
+    	}
  
         // Turn the above arrays into XYSeries':
         XYSeries series1 = new SimpleXYSeries(
-                Arrays.asList(series1Numbers),          // SimpleXYSeries takes a List so turn our array into a List
+                Arrays.asList(values),          // SimpleXYSeries takes a List so turn our array into a List
                 SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
                 "This Year");                           // Set the display title of the series
  

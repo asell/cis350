@@ -1,6 +1,9 @@
 package com.example.danceforhealth;
 
+import java.util.Date;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.androidplot.ui.LayoutManager;
 import com.androidplot.ui.SizeLayoutType;
@@ -26,6 +29,9 @@ import android.widget.Button;
 public class WeekProgressActivity extends Activity {
 
 	private XYPlot plot;
+	private List<Workout> mon = new ArrayList<Workout>(), tue = new ArrayList<Workout>(), wed = new ArrayList<Workout>(), 
+			thu = new ArrayList<Workout>(), fri = new ArrayList<Workout>(), sat = new ArrayList<Workout>(), 
+			sun = new ArrayList<Workout>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +41,56 @@ public class WeekProgressActivity extends Activity {
 		// initialize our XYPlot reference:
         plot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
  
-        // Create a couple arrays of y-values to plot:
-        Number[] series1Numbers = {0, 130, 125, 127, 127, 120, 124, 123};
+        // Get previous workouts
+    	PrevWorkout pw = PrevWorkout.getInstance();
+    	List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
+    	
+    	// get current date and week
+		Date current = new Date();
+		String[] temp = current.toString().split(" ");
+		Integer currentDay = Integer.parseInt(temp[2]);
+		String currentDOW = temp[0];
+		int min = 0;
+		String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+		for (int i = 0; i < days.length; i++) {
+			if (currentDOW.equals(days[i])) min = i;
+		}
+    	// sort workouts by date
+    	for (Workout w : workouts) {
+    		String[] date = w.getDate().split(" ");
+    		Integer day = Integer.parseInt(date[2]);
+    		String dow = date[0];
+    		
+    		if ((currentDay-day) <= min && (currentDay-day) >= 0) {
+    			for (int i = 0; i < days.length; i++) 
+    				if (dow.equals(days[i])) getDayWorkoutList(i).add(w);
+    		}
+    	}
+    	// turn workouts into an array of values
+    	Number[] values = {0, 0, 0, 0, 0, 0, 0, 0};
+    	int count = 0;
+    	for (int i = 0; i <= min; i++) {
+    		if (getDayWorkoutList(i).size() != 0) { // if there is a workout that day
+    			values[i+1] = getDayWorkoutList(i).get(0).getWeight();
+    			count ++;
+    		} else if (count > 0) { // if there is no workout, use the value from the day before
+    			values[i+1] = values[i];
+    			count ++;
+    		} else {
+    			values[i+1] = -1; // if there was no previous value, mark with -1
+    		}
+    	}
+    	
+    	if ((count < min + 1) && (workouts.size() > count)) {
+    		int base = workouts.get(count-1).getWeight();
+    		for (int i = 1; i < values.length; i++) {
+    			if ((Integer)values[i] == -1) values[i] = base;
+    		}
+    	}
  
         // Turn the above arrays into XYSeries':
         XYSeries series1 = new SimpleXYSeries(
-                Arrays.asList(series1Numbers),          // SimpleXYSeries takes a List so turn our array into a List
+                Arrays.asList(values),          // SimpleXYSeries takes a List so turn our array into a List
                 SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
                 "This Week");                           // Set the display title of the series
  
@@ -62,6 +112,19 @@ public class WeekProgressActivity extends Activity {
 		Button pr = (Button) findViewById(R.id.back);
 		pr.setTypeface(font_two);
 		
+	}
+	
+	private List<Workout> getDayWorkoutList(int num) {
+		switch (num) {
+		case 0: return mon;
+		case 1: return tue;
+		case 2: return wed;
+		case 3: return thu;
+		case 4: return fri;
+		case 5: return sat;
+		case 6: return sun;
+		default: return null;
+		}
 	}
 
 	@Override
