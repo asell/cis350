@@ -95,6 +95,10 @@ public class Workout implements Parcelable {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
+	
+	public void setDate(String date) {
+		this.date = date;
+	}
 
 	public String toString() {
 		return (this.getType() + " on \n" + this.getDate());

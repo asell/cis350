@@ -43,7 +43,7 @@ public class YearProgressActivity extends Activity {
 				new SimpleDateFormat ("E M dd yyyy");
 		String current = ft.format(d);
 		String[] temp = current.toString().split(" ");
-		int currentMonth = Integer.parseInt(temp[2]);
+		int currentMonth = Integer.parseInt(temp[1]);
 		String currentYear = temp[3];
 		
 		int count = 0;
@@ -53,15 +53,15 @@ public class YearProgressActivity extends Activity {
     		int month = Integer.parseInt(date[1]);
     		String year = date[3];
     		if (year.equals(currentYear)) {
+    			if (values[month] == null) count++;
     			values[month] = w.getWeight();
-    			count++;
     		}
 		}
 		
 		if ((count < currentMonth) && (workouts.size() > count)) {
     		int base = workouts.get(count-1).getWeight();
     		boolean toggle = true;
-    		for (int i = 1; i < values.length; i++) {
+    		for (int i = 1; i < currentMonth; i++) {
     			if ((Integer)values[i] == null) {
     				if (toggle) values[i] = base;
     				else values[i] = values[i-1];

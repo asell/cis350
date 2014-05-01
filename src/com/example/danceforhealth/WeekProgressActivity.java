@@ -1,5 +1,6 @@
 package com.example.danceforhealth;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,9 +30,6 @@ import android.widget.Button;
 public class WeekProgressActivity extends Activity {
 
 	private XYPlot plot;
-	private List<Workout> mon = new ArrayList<Workout>(), tue = new ArrayList<Workout>(), wed = new ArrayList<Workout>(), 
-			thu = new ArrayList<Workout>(), fri = new ArrayList<Workout>(), sat = new ArrayList<Workout>(), 
-			sun = new ArrayList<Workout>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,41 +48,42 @@ public class WeekProgressActivity extends Activity {
 		String[] temp = current.toString().split(" ");
 		Integer currentDay = Integer.parseInt(temp[2]);
 		String currentDOW = temp[0];
-		int min = 0;
-		String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
-		for (int i = 0; i < days.length; i++) {
-			if (currentDOW.equals(days[i])) min = i;
-		}
+		int min = sortDay(currentDOW);
+		
+    	// turn workouts into an array of values
+    	Number[] values = new Number[8];
+    	int count = 0;
+    	
     	// sort workouts by date
     	for (Workout w : workouts) {
     		String[] date = w.getDate().split(" ");
     		Integer day = Integer.parseInt(date[2]);
+    		Integer month = Integer.parseInt(date[1]);
+    		Integer year = Integer.parseInt(date[3]);
     		String dow = date[0];
     		
-    		if ((currentDay-day) <= min && (currentDay-day) >= 0) {
-    			for (int i = 0; i < days.length; i++) 
-    				if (dow.equals(days[i])) getDayWorkoutList(i).add(w);
-    		}
-    	}
-    	// turn workouts into an array of values
-    	Number[] values = {0, 0, 0, 0, 0, 0, 0, 0};
-    	int count = 0;
-    	for (int i = 0; i <= min; i++) {
-    		if (getDayWorkoutList(i).size() != 0) { // if there is a workout that day
-    			values[i+1] = getDayWorkoutList(i).get(0).getWeight();
-    			count ++;
-    		} else if (count > 0) { // if there is no workout, use the value from the day before
-    			values[i+1] = values[i];
-    			count ++;
-    		} else {
-    			values[i+1] = -1; // if there was no previous value, mark with -1
+    		// check if day is in this week
+    		Calendar c = Calendar.getInstance();
+    		c.set(year, month-1, day);
+    		long time = c.getTimeInMillis();
+    		long now = current.getTime();
+    		long millsInDay = 86400000;
+    		
+    		if ((now-time)/millsInDay <= min && (now-time)/millsInDay >= 0) {
+    			if (values[sortDay(dow)] == null) count++;
+    			values[sortDay(dow)] = w.getWeight();
     		}
     	}
     	
     	if ((count < min + 1) && (workouts.size() > count)) {
     		int base = workouts.get(count-1).getWeight();
-    		for (int i = 1; i < values.length; i++) {
-    			if ((Integer)values[i] == -1) values[i] = base;
+    		boolean toggle = true;
+    		for (int i = 1; i < min; i++) {
+    			if ((Integer)values[i] == null) {
+    				if (toggle) values[i] = base;
+    				else values[i] = values[i-1];
+    			}
+    			else toggle = false;
     		}
     	}
  
@@ -114,16 +113,21 @@ public class WeekProgressActivity extends Activity {
 		
 	}
 	
-	private List<Workout> getDayWorkoutList(int num) {
-		switch (num) {
-		case 0: return mon;
-		case 1: return tue;
-		case 2: return wed;
-		case 3: return thu;
-		case 4: return fri;
-		case 5: return sat;
-		case 6: return sun;
-		default: return null;
+	private int sortDay(String day) {
+		if (day.equals("Mon")) {
+			return 1;
+		} else if (day.equals("Tue")) {
+			return 2;
+		} else if (day.equals("Wed")) {
+			return 3;
+		} else if (day.equals("Thu")) {
+			return 4;
+		} else if (day.equals("Fri")) {
+			return 5;
+		} else if (day.equals("Sat")) {
+			return 6;
+		} else {
+			return 7;
 		}
 	}
 
