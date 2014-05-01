@@ -31,5 +31,8 @@
 
     <string name="title_activity_heart_rate_two">Measure Your Heart Rate Part Two</string>
     <string name="title_activity_graph">GraphActivity</string>
+    <string name="title_activity_week_progress">WeekProgressActivity</string>
+    <string name="title_activity_month_progress">MonthProgressActivity</string>
+    <string name="title_activity_year_progress">YearProgressActivity</string>
 
 </resources>

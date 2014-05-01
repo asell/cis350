@@ -69,6 +69,21 @@
             android:name="com.example.danceforhealth.GraphActivity"
             android:label="@string/title_activity_graph" >
         </activity>
+<<<<<<< HEAD
+=======
+        <activity
+            android:name="com.example.danceforhealth.WeekProgressActivity"
+            android:label="@string/title_activity_week_progress" >
+        </activity>
+        <activity
+            android:name="com.example.danceforhealth.MonthProgressActivity"
+            android:label="@string/title_activity_month_progress" >
+        </activity>
+        <activity
+            android:name="com.example.danceforhealth.YearProgressActivity"
+            android:label="@string/title_activity_year_progress" >
+        </activity>
+>>>>>>> upstream/master
     </application>
 
 </manifest>
