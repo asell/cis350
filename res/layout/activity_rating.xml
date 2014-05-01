@@ -290,21 +290,36 @@
             android:layout_height="wrap_content"
             android:text="@string/seven" />
     </RadioGroup>
-    
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="It makes me tired"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/button1"
-        android:background="@drawable/custom_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="onNextButtonClick"
-        android:text="@string/next" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/custom_button"
+            android:onClick="onNextButtonClick"
+            android:text="@string/next" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center_vertical|center_horizontal|right"
+            android:text="@string/back" />
+
+	</LinearLayout>
 
 </LinearLayout>

@@ -95,7 +95,7 @@ public class HeartRateTwo extends Activity {
 		Intent i = new Intent(this, WorkoutSummary.class).putExtra("workout", w);
 		
 		
-		//.putExtra("workout", w);
+		
 
 		// pass the Intent to the Activity, 
 		// using the specified request code
@@ -107,7 +107,17 @@ public class HeartRateTwo extends Activity {
 		String input = et.getText().toString();
 		int numIn = Integer.parseInt(input) * 4;
 		t.setText("\nYour heart rate is: " + numIn + "\n");
+		heartrate = numIn;
 		w.setHeartrate(numIn);
+	}
+	public void onBackButtonClick(View view) {
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, HeartRateActivity.class).putExtra("workout", w);
+
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
 	}
 
 }

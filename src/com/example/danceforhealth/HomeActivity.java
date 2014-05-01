@@ -76,5 +76,18 @@ public class HomeActivity extends Activity {
 		// using the specified request code
 		startActivity(i);
 	}
+	
+	
+	// calculates the level that the person is currently at
+	public int calculateLevelByHours() {
+		PrevWorkout pws = PrevWorkout.getInstance();
+		int sum = 0;
+		for(Workout w:pws.getPrevious()) {
+			sum += w.getTime();
+		}
+		// level up every time you reach another ten hours
+		int level = sum/600;
+		return level;
+	}
 
 }

@@ -52,5 +52,16 @@ public class HeartRateActivity extends Activity {
 		// using the specified request code
 		startActivity(i);
 	}
+	
+public void onBackButtonClick(View view) {
+		
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, WeightAndStepsActivity.class).putExtra("workout", w);
+
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
+	}
 
 }

@@ -19,10 +19,9 @@ public class WorkoutSummary extends Activity{
 
 		Bundle b = this.getIntent().getExtras();
 		if(b!=null)
-<<<<<<< HEAD
+
 		    workout = (Workout) b.get("workout");
-=======
-			workout = b.getParcelable("workout");
+		workout = b.getParcelable("workout");
 
 		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
 		TextView txt = (TextView) findViewById(R.id.Header);
@@ -44,7 +43,6 @@ public class WorkoutSummary extends Activity{
 		TextView hr = (TextView)findViewById(R.id.workoutHR);
 		hr.setText("And your heartrate was " + workout.getHR());
 
->>>>>>> upstream/master
 	}
 
 	@Override

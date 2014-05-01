@@ -18,6 +18,7 @@
     <string name="six">6</string>
     <string name="seven">7</string>
     <string name="next">Next</string>
+    <string name="back">Back</string>
 
     <string-array name="workouts_array">
         <item>Dance</item>

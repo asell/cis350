@@ -32,17 +32,16 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
-		
-<<<<<<< HEAD
+
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
 		all.add(w);
 		selection = "Dance";
-=======
+
 		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
 		Button b = (Button) findViewById(R.id.button1);
 		b.setTypeface(font);
->>>>>>> upstream/master
+		
 	}
 	
 	@Override
@@ -55,6 +54,7 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 	
 	public void onNextButtonClick(View view) {
 			w.setType(selection);
+			w.setTime(time);
 			// create an Intent using the current Activity 
 			// and the Class to be created
 			Intent i = new Intent(this, RatingActivity.class).putExtra("workout", w);
@@ -96,5 +96,7 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 	public void onNothingSelected(AdapterView<?> parent) {
 		// TODO Auto-generated method stub
 	}
+	
+
 
 }

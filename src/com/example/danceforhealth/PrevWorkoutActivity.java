@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class PrevWorkoutActivity extends ListActivity {
   public void onCreate(Bundle icicle) {
@@ -17,7 +18,12 @@ public class PrevWorkoutActivity extends ListActivity {
     
 	PrevWorkout pw = PrevWorkout.getInstance();
 	List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
-	Workout[] values = (Workout[]) workouts.toArray();
+	Workout[] values = new Workout[workouts.size()];
+	for (int i = 0; i < workouts.size(); i++) {
+		values[i] = workouts.get(i);
+	}
+	//Workout[] values = (Workout[]) workouts.toArray(Workout[]);
+    
     
     View header = getLayoutInflater().inflate(R.layout.header, null);
     View footer = getLayoutInflater().inflate(R.layout.footer, null);
@@ -30,7 +36,6 @@ public class PrevWorkoutActivity extends ListActivity {
     setListAdapter(adapter);
   }
   
-  
 	public void onBackButtonClick(View view) {
 		// create an Intent using the current Activity 
 		// and the Class to be created
@@ -41,24 +46,26 @@ public class PrevWorkoutActivity extends ListActivity {
 		startActivity(i);
 	}
   
- 
+  
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
+    Workout item = (Workout) getListAdapter().getItem(position - 1);
+    Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+    
+    
 	  
-	    Workout item = (Workout) getListAdapter().getItem(position);
-	  
-		Intent i = new Intent();
-		Bundle b = new Bundle();
-		b.putParcelable("workout", item);
-		i.putExtras(b);
-	
-		i.setClass(v.getContext(), WorkoutSummary.class);
-	
-		// pass the Intent to the Activity, 
-		// using the specified request code
-		startActivity(i);
-	  
-	  
-	
+	Intent i = new Intent();
+	Bundle b = new Bundle();
+	b.putParcelable("workout", item);
+	i.putExtras(b);
+
+	i.setClass(v.getContext(), WorkoutSummary.class);
+
+	// pass the Intent to the Activity, 
+	// using the specified request code
+	startActivity(i);
+  
+    
+    
   }
 } 
