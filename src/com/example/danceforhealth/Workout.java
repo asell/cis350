@@ -24,7 +24,6 @@ public class Workout implements Parcelable {
 		SimpleDateFormat ft = 
 				new SimpleDateFormat ("E M dd yyyy");
 		this.date = ft.format(date);
-		System.out.println(date);
 	}
 
 	public Workout(String type, int strain, int hr, int st, int wt) {
@@ -44,7 +43,7 @@ public class Workout implements Parcelable {
 		setStrain(p.readInt());
 		setHeartrate(p.readInt());
 		setSteps(p.readInt());
-		setWeight(p.readInt());
+		setDate(p.readString());
 
 	}
 
@@ -95,6 +94,10 @@ public class Workout implements Parcelable {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
+	
+	public void setDate(String date) {
+		this.date = date;
+	}
 
 	public String toString() {
 		return (this.getType() + " on \n" + this.getDate());
@@ -128,6 +131,7 @@ public class Workout implements Parcelable {
 		parcel.writeInt(getHR());
 		parcel.writeInt(getSteps());
 		parcel.writeInt(getWeight());
+		parcel.writeString(getDate());
 
 	}
 

@@ -13,5 +13,6 @@
 			<accessrule kind="nonaccessible" pattern="com/android/internal/**"/>
 		</accessrules>
 	</classpathentry>
+	<classpathentry kind="lib" path="libs/androidplot-core-0.6.0.jar" sourcepath="/Users/lexiselldorff/Downloads/androidplot-core-0.6.0-sources.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
