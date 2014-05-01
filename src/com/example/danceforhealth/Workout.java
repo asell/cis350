@@ -106,8 +106,13 @@ public class Workout implements Parcelable {
 		this.weight = weight;
 	}
 	
+<<<<<<< HEAD
 	public void setTime(int minutes) {
 		this.time = minutes;
+=======
+	public void setDate(String date) {
+		this.date = date;
+>>>>>>> upstream/master
 	}
 
 	public String toString() {

@@ -54,7 +54,6 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 	
 	public void onNextButtonClick(View view) {
 			w.setType(selection);
-			w.setTime(time);
 			// create an Intent using the current Activity 
 			// and the Class to be created
 			Intent i = new Intent(this, RatingActivity.class).putExtra("workout", w);

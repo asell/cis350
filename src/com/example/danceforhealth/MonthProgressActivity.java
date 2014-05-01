@@ -61,7 +61,7 @@ public class MonthProgressActivity extends Activity {
 		if ((count < currentDay) && (workouts.size() > count)) {
     		int base = workouts.get(count-1).getWeight();
     		boolean toggle = true;
-    		for (int i = 1; i < values.length; i++) {
+    		for (int i = 1; i < currentDay; i++) {
     			if ((Integer)values[i] == null) {
     				if (toggle) values[i] = base;
     				else values[i] = values[i-1];

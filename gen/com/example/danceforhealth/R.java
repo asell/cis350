@@ -37,82 +37,7 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-<<<<<<< HEAD
-        public static final int Header=0x7f09003f;
-        public static final int RadioButton01=0x7f09001e;
-        public static final int RadioButton02=0x7f09001d;
-        public static final int RadioButton03=0x7f09001c;
-        public static final int RadioButton04=0x7f09001a;
-        public static final int RadioButton05=0x7f09001b;
-        public static final int RadioButton06=0x7f090019;
-        public static final int RadioButton07=0x7f09001f;
-        public static final int RadioButton08=0x7f09002d;
-        public static final int RadioButton09=0x7f09002c;
-        public static final int RadioButton10=0x7f090031;
-        public static final int RadioButton11=0x7f09002b;
-        public static final int RadioButton12=0x7f090030;
-        public static final int RadioButton13=0x7f09002e;
-        public static final int RadioButton14=0x7f09002f;
-        public static final int RadioButton15=0x7f090023;
-        public static final int RadioButton16=0x7f090024;
-        public static final int RadioButton17=0x7f090028;
-        public static final int RadioButton18=0x7f090026;
-        public static final int RadioButton19=0x7f090025;
-        public static final int RadioButton20=0x7f090027;
-        public static final int RadioButton21=0x7f090022;
-        public static final int RadioButton22=0x7f090035;
-        public static final int RadioButton23=0x7f090036;
-        public static final int RadioButton24=0x7f09003a;
-        public static final int RadioButton25=0x7f090038;
-        public static final int RadioButton26=0x7f090037;
-        public static final int RadioButton27=0x7f090039;
-        public static final int RadioButton28=0x7f090034;
-        public static final int RadioGroup01=0x7f090018;
-        public static final int RadioGroup02=0x7f09002a;
-        public static final int RadioGroup03=0x7f090021;
-        public static final int RadioGroup04=0x7f090033;
-        public static final int action_settings=0x7f090048;
-        public static final int back=0x7f090002;
-        public static final int button1=0x7f090009;
-        public static final int button2=0x7f09003c;
-        public static final int custom_font=0x7f09000b;
-        public static final int dummy=0x7f09000e;
-        public static final int editText1=0x7f09003d;
-        public static final int editText2=0x7f09003e;
-        public static final int firstLine=0x7f090047;
-        public static final int hrText=0x7f090008;
-        public static final int hr_input=0x7f090006;
-        public static final int hr_input_button=0x7f090007;
-        public static final int icon=0x7f090045;
-        public static final int linearLayout1=0x7f09000a;
-        public static final int listview=0x7f09000f;
-        public static final int newWorkout=0x7f09000c;
-        public static final int preWorkout=0x7f090001;
-        public static final int progress=0x7f09000d;
-        public static final int radio0=0x7f090011;
-        public static final int radio1=0x7f090012;
-        public static final int radio2=0x7f090013;
-        public static final int radio3=0x7f090014;
-        public static final int radio4=0x7f090015;
-        public static final int radio5=0x7f090016;
-        public static final int radio6=0x7f090017;
-        public static final int radioGroup1=0x7f090010;
-        public static final int secondLine=0x7f090046;
-        public static final int textView1=0x7f090000;
-        public static final int textView2=0x7f090005;
-        public static final int textView3=0x7f090020;
-        public static final int textView4=0x7f090029;
-        public static final int textView5=0x7f090032;
-        public static final int textView6=0x7f09003b;
-        public static final int timer=0x7f090003;
-        public static final int timerText=0x7f090004;
-        public static final int workoutHR=0x7f090044;
-        public static final int workoutRating=0x7f090041;
-        public static final int workoutSteps=0x7f090042;
-        public static final int workoutType=0x7f090040;
-        public static final int workoutWeight=0x7f090043;
-=======
-        public static final int Header=0x7f0a0045;
+        public static final int Header=0x7f0a0046;
         public static final int RadioButton01=0x7f0a0025;
         public static final int RadioButton02=0x7f0a0024;
         public static final int RadioButton03=0x7f0a0023;
@@ -148,12 +73,12 @@ public final class R {
         public static final int action_settings=0x7f0a004f;
         public static final int back=0x7f0a0005;
         public static final int button1=0x7f0a0008;
-        public static final int button2=0x7f0a004b;
+        public static final int button2=0x7f0a0043;
         public static final int custom_font=0x7f0a0010;
         public static final int custom_font_two=0x7f0a0006;
         public static final int dummy=0x7f0a0013;
-        public static final int editText1=0x7f0a0043;
-        public static final int editText2=0x7f0a0044;
+        public static final int editText1=0x7f0a0044;
+        public static final int editText2=0x7f0a0045;
         public static final int firstLine=0x7f0a004e;
         public static final int hrText=0x7f0a000e;
         public static final int hr_input=0x7f0a000c;
@@ -186,29 +111,16 @@ public final class R {
         public static final int timer=0x7f0a0009;
         public static final int timerText=0x7f0a000a;
         public static final int week=0x7f0a0002;
-        public static final int workoutHR=0x7f0a004a;
-        public static final int workoutRating=0x7f0a0047;
-        public static final int workoutSteps=0x7f0a0048;
-        public static final int workoutType=0x7f0a0046;
-        public static final int workoutWeight=0x7f0a0049;
+        public static final int workoutHR=0x7f0a004b;
+        public static final int workoutRating=0x7f0a0048;
+        public static final int workoutSteps=0x7f0a0049;
+        public static final int workoutType=0x7f0a0047;
+        public static final int workoutWeight=0x7f0a004a;
         public static final int year=0x7f0a0004;
->>>>>>> upstream/master
     }
     public static final class layout {
         public static final int activity_dummy=0x7f030000;
         public static final int activity_graph=0x7f030001;
-<<<<<<< HEAD
-        public static final int activity_heart_rate_two=0x7f030002;
-        public static final int activity_home=0x7f030003;
-        public static final int activity_list_view=0x7f030004;
-        public static final int activity_prev_workout=0x7f030005;
-        public static final int activity_rating=0x7f030006;
-        public static final int activity_weight_and_steps=0x7f030007;
-        public static final int activity_workout_summary=0x7f030008;
-        public static final int footer=0x7f030009;
-        public static final int header=0x7f03000a;
-        public static final int row_data=0x7f03000b;
-=======
         public static final int activity_heart_rate=0x7f030002;
         public static final int activity_heart_rate_two=0x7f030003;
         public static final int activity_home=0x7f030004;
@@ -224,7 +136,6 @@ public final class R {
         public static final int footer=0x7f03000e;
         public static final int header=0x7f03000f;
         public static final int row_data=0x7f030010;
->>>>>>> upstream/master
     }
     public static final class menu {
         public static final int dummy=0x7f090000;
@@ -242,30 +153,9 @@ public final class R {
         public static final int year_progress=0x7f09000c;
     }
     public static final class string {
-<<<<<<< HEAD
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int back=0x7f050011;
-        public static final int five=0x7f05000d;
-        public static final int four=0x7f05000c;
-        public static final int hello_world=0x7f050002;
-        public static final int next=0x7f050010;
-        public static final int one=0x7f050009;
-        public static final int rating_header=0x7f050008;
-        public static final int seven=0x7f05000f;
-        public static final int six=0x7f05000e;
-        public static final int three=0x7f05000b;
-        public static final int title_activity_graph=0x7f050013;
-        public static final int title_activity_heart_rate=0x7f050005;
-        public static final int title_activity_heart_rate_two=0x7f050012;
-        public static final int title_activity_new_workout=0x7f050003;
-        public static final int title_activity_prev_workout=0x7f050004;
-        public static final int title_activity_rating=0x7f050006;
-        public static final int title_activity_weight_and_steps=0x7f050007;
-        public static final int two=0x7f05000a;
-=======
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int back=0x7f060011;
         public static final int five=0x7f06000d;
         public static final int four=0x7f06000c;
         public static final int hello_world=0x7f060002;
@@ -275,18 +165,17 @@ public final class R {
         public static final int seven=0x7f06000f;
         public static final int six=0x7f06000e;
         public static final int three=0x7f06000b;
-        public static final int title_activity_graph=0x7f060012;
+        public static final int title_activity_graph=0x7f060013;
         public static final int title_activity_heart_rate=0x7f060005;
-        public static final int title_activity_heart_rate_two=0x7f060011;
-        public static final int title_activity_month_progress=0x7f060014;
+        public static final int title_activity_heart_rate_two=0x7f060012;
+        public static final int title_activity_month_progress=0x7f060015;
         public static final int title_activity_new_workout=0x7f060003;
         public static final int title_activity_prev_workout=0x7f060004;
         public static final int title_activity_rating=0x7f060006;
-        public static final int title_activity_week_progress=0x7f060013;
+        public static final int title_activity_week_progress=0x7f060014;
         public static final int title_activity_weight_and_steps=0x7f060007;
-        public static final int title_activity_year_progress=0x7f060015;
+        public static final int title_activity_year_progress=0x7f060016;
         public static final int two=0x7f06000a;
->>>>>>> upstream/master
     }
     public static final class style {
         /** 
