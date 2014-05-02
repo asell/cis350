@@ -103,11 +103,9 @@ public class HeartRateTwo extends Activity {
 		// add workout to database
 		all.add(w);
 
-		
 		// add workout to internal memory
-		
 		String data = w.getType() + " " + w.getStrain() + " " + w.getHeartrate() + " " + w.getSteps() 
-				+ " " + w.getWeight() + " " + w.getDate();
+				+ " " + w.getWeight() + " " + w.getDate() + " " + w.getTime();
 		String file = "data_workout";
 		
 	      try {
@@ -120,7 +118,6 @@ public class HeartRateTwo extends Activity {
 	         // TODO Auto-generated catch block
 	         e.printStackTrace();
 	      }
-		
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created

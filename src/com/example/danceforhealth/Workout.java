@@ -27,14 +27,11 @@ public class Workout implements Parcelable {
 		weight = 0;
 		time = 0;
 		
-
 		Date date = new Date();
-
 
 		 SimpleDateFormat ft = 
 			      new SimpleDateFormat ("E M dd yyyy");
 		 this.date = ft.format(date);
-
 
 
 	}

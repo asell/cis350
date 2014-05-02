@@ -128,6 +128,8 @@ public class HomeActivity extends Activity {
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
+		
+		workouts.clear();
 
 		String delims = "\n";
 		String[] lines;
@@ -152,9 +154,12 @@ public class HomeActivity extends Activity {
 			date += " " + tokens[6]; // month
 			date += " " + tokens[7]; // day 
 			date += " " + tokens[8]; // year
+			String timeString = tokens[9];
+			int time = Integer.parseInt(timeString);
 
 			Workout wo = new Workout(type, strain, hr, steps, weight);
 			wo.setDate(date);
+			wo.setTime(time);
 			workouts.add(wo);
 		}
 
