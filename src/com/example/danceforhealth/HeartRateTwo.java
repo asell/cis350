@@ -1,5 +1,7 @@
 package com.example.danceforhealth;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import android.os.Bundle;
@@ -87,6 +89,11 @@ public class HeartRateTwo extends Activity {
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
+		
+		Date date = new Date();
+		SimpleDateFormat ft = 
+				new SimpleDateFormat ("E M dd yyyy");
+		w.setDate(ft.format(date));
 		
 		all.add(w);
 		
