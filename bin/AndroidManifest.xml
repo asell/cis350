@@ -32,11 +32,6 @@
         <activity
             android:name="com.example.danceforhealth.HeartRateActivity"
             android:label="@string/title_activity_heart_rate" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.danceforhealth.RatingActivity"
