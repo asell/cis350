@@ -13,13 +13,16 @@ public class WorkoutSummary extends Activity{
 
 	private Workout workout;
 
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_workout_summary);
 
 		Bundle b = this.getIntent().getExtras();
 		if(b!=null)
-			workout = b.getParcelable("workout");
+
+		    workout = (Workout) b.get("workout");
+		workout = b.getParcelable("workout");
 
 		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
 		TextView txt = (TextView) findViewById(R.id.Header);

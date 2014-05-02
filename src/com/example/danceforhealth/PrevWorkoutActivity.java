@@ -16,11 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class PrevWorkoutActivity extends ListActivity {
-  public void onCreate(Bundle icicle) {
+  @Override
+public void onCreate(Bundle icicle) {
     super.onCreate(icicle);
     
 	PrevWorkout pw = PrevWorkout.getInstance();
-	List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
+	List<Workout> workouts = pw.getPrevious();
 	Workout[] values = new Workout[workouts.size()];
 	for (int i = 0; i < workouts.size(); i++) {
 		values[i] = workouts.get(i);

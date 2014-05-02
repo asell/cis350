@@ -38,7 +38,7 @@
             androidPlot.legendWidget.textPaint.textSize="@dimen/legend_text_font_size"
             androidPlot.rangeLabel="Weight"
             androidPlot.rangeLabelWidget.labelPaint.textSize="@dimen/range_label_font_size"
-            androidPlot.title="This Month's Progress"
+            androidPlot.title="This Month&apos;s Progress"
             androidPlot.titleWidget.labelPaint.textSize="@dimen/title_font_size" />
 
         <Button

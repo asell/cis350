@@ -1,15 +1,8 @@
 package com.example.danceforhealth;
 
-import java.util.Arrays;
-
 import android.os.Bundle;
-import com.androidplot.xy.SimpleXYSeries;
-import com.androidplot.xy.XYSeries;
-import com.androidplot.ui.AnchorPosition;
-import com.androidplot.xy.*;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;

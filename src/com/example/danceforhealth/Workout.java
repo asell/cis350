@@ -17,6 +17,7 @@ public class Workout implements Parcelable {
 	private int steps;
 	private int weight;
 	private String date;
+	private int time;
 
 	public Workout() {
 		type = "";
@@ -24,10 +25,18 @@ public class Workout implements Parcelable {
 		heartrate = 0;
 		steps = 0;
 		weight = 0;
+		time = 0;
+		
+
 		Date date = new Date();
-		SimpleDateFormat ft = 
-				new SimpleDateFormat ("E M dd yyyy");
-		this.date = ft.format(date);
+
+
+		 SimpleDateFormat ft = 
+			      new SimpleDateFormat ("E M dd yyyy");
+		 this.date = ft.format(date);
+
+
+
 	}
 
 	public Workout(String type, int strain, int hr, int st, int wt) {
@@ -78,6 +87,10 @@ public class Workout implements Parcelable {
 	public int getHeartrate() {
 		return heartrate;
 	}
+	
+	public int getTime() {
+		return time;
+	}
 
 	public void setHeartrate(int heartrate) {
 		this.heartrate = heartrate;
@@ -99,20 +112,28 @@ public class Workout implements Parcelable {
 		this.weight = weight;
 	}
 	
+
+	public void setTime(int minutes) {
+		this.time = minutes;
+	}
+
 	public void setDate(String date) {
 		this.date = date;
 	}
 
+	@Override
 	public String toString() {
 		return (this.getType() + " on \n" + this.getDate());
 	}
 
 	public static final Parcelable.Creator<Workout> CREATOR = new Creator<Workout>() {
+		@Override
 		public Workout createFromParcel(Parcel source) {
 
 			return new Workout(source);
 		}
 
+		@Override
 		public Workout[] newArray(int size) {
 
 			return new Workout[size];
@@ -135,7 +156,11 @@ public class Workout implements Parcelable {
 		parcel.writeInt(getHR());
 		parcel.writeInt(getSteps());
 		parcel.writeInt(getWeight());
+
+		parcel.writeInt(getTime());
+
 		parcel.writeString(getDate());
+
 
 	}
 	

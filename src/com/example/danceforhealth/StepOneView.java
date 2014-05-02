@@ -2,7 +2,6 @@ package com.example.danceforhealth;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -27,11 +26,13 @@ public class StepOneView extends View {
 		//image = Bitmap.createScaledBitmap(image, 150, 150, false);
 	}
 	
+	@Override
 	public void onDraw(Canvas c) {
 		/* called each time this View is drawn */
 		//canvas = c;
 	}
 	
+	@Override
 	public boolean onTouchEvent(MotionEvent e) {
 		return false;
 	}

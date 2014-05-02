@@ -19,54 +19,53 @@
             android:id="@+id/custom_font"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-        	android:layout_marginBottom="15dp"
+            android:layout_marginBottom="15dp"
             android:gravity="center"
             android:text="Welcome to the Dance for Health App!"
             android:textSize="40sp" />
 
-    <Button
-        android:id="@+id/preWorkout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/custom_button"
-        android:onClick="onPrevButtonClick"
-        android:text="Previous Workouts" />
+        <Button
+            android:id="@+id/preWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onPrevButtonClick"
+            android:text="Previous Workouts" />
 
-    <Button
-        android:id="@+id/newWorkout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/custom_button"
-        android:onClick="onNewButtonClick"
-        android:text="New Workout" />
-        
-    <Button
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/custom_button"
-        android:onClick="onProgressButtonClick"
-        android:text="See Your Progress" />
-    
-    <Button
-        android:id="@+id/dummy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/custom_button"
-        android:onClick="onDummyClick"
-        android:text="TEST ME" />
+        <Button
+            android:id="@+id/newWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onNewButtonClick"
+            android:text="New Workout" />
 
+        <Button
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onProgressButtonClick"
+            android:text="See Your Progress" />
+
+        <Button
+            android:id="@+id/dummy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_button"
+            android:onClick="onDummyClick"
+            android:text="TEST ME" />
     </LinearLayout>
 
 </RelativeLayout>

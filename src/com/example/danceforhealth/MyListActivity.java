@@ -10,7 +10,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class MyListActivity extends ListActivity {
-  public void onCreate(Bundle icicle) {
+  @Override
+public void onCreate(Bundle icicle) {
     super.onCreate(icicle);
     
     Workout[] values = new Workout[] { new Workout("Dance", 0, 87, 346, 179) , 

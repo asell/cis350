@@ -1,14 +1,12 @@
 package com.example.danceforhealth;
 
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class HeartRateActivity extends Activity {
@@ -47,6 +45,17 @@ public class HeartRateActivity extends Activity {
 		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, HeartRateTwo.class).putExtra("workout", w);
+
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
+	}
+	
+public void onBackButtonClick(View view) {
+		
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, WeightAndStepsActivity.class).putExtra("workout", w);
 
 		// pass the Intent to the Activity, 
 		// using the specified request code
