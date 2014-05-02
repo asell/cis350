@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 
 public class TestWorkout extends TestCase {
 
+	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 	}
@@ -20,7 +21,7 @@ public class TestWorkout extends TestCase {
 	
 	public void testToString() throws Exception {
 		Workout w = new Workout("Dance", 3, 5, 9, 11);
-		w.setDate("5");
+		//w.setDate("5");
 		assertEquals("Dance\n5", w.toString());
 		
 	}

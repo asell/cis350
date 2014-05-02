@@ -13,7 +13,6 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class NewWorkoutActivity extends Activity implements OnItemSelectedListener{
 
@@ -83,10 +82,6 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 			break;
 		case 4:
 			selection = "Swim";
-			break;
-		// learn how to allow user to input "other" in dropdown text box
-		case 5:
-			selection = "Other";
 		}
 		
 	}

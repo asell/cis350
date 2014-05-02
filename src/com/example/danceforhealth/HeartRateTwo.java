@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,7 +18,6 @@ public class HeartRateTwo extends Activity {
 	TextView tv;
 	CountDownTimer timer;
 	private Workout w;
-	private int heartrate;
 	EditText et;
 	
 	@Override
@@ -32,7 +30,8 @@ public class HeartRateTwo extends Activity {
 		tv.setTypeface(font);
         timer = new CountDownTimer(18000, 1000) {
 
-            public void onTick(long millisUntilFinished) {
+            @Override
+			public void onTick(long millisUntilFinished) {
             	if (millisUntilFinished > 17000) {
             		tv.setText("Ready?");
             	} else if (millisUntilFinished > 16000) {
@@ -44,7 +43,8 @@ public class HeartRateTwo extends Activity {
             	}
             }
 
-            public void onFinish() {
+            @Override
+			public void onFinish() {
                 tv.setText("Stop Counting!");
             }
          };
@@ -85,10 +85,10 @@ public class HeartRateTwo extends Activity {
 	public void onNextButtonClick(View view) {
 		
 
-		PrevWorkout pw = PrevWorkout.getInstance();
-		List<Workout> all = pw.getPrevious();
-		
-		all.add(w);
+//		PrevWorkout pw = PrevWorkout.getInstance();
+//		List<Workout> all = pw.getPrevious();
+//		
+//		all.add(w);
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created
@@ -107,7 +107,7 @@ public class HeartRateTwo extends Activity {
 		String input = et.getText().toString();
 		int numIn = Integer.parseInt(input) * 4;
 		t.setText("\nYour heart rate is: " + numIn + "\n");
-		heartrate = numIn;
+		int heartrate = numIn;
 		w.setHeartrate(numIn);
 	}
 	public void onBackButtonClick(View view) {

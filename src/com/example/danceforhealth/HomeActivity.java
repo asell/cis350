@@ -1,6 +1,9 @@
 package com.example.danceforhealth;
 
+
+
 import android.os.Bundle;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -79,16 +82,23 @@ public class HomeActivity extends Activity {
 	}
 	
 	
-	// calculates the level that the person is currently at
-	public int calculateLevelByHours() {
+	// calculates the level that the person is currently at by their time
+	public int calculateTime() {
 		PrevWorkout pws = PrevWorkout.getInstance();
 		int sum = 0;
 		for(Workout w:pws.getPrevious()) {
 			sum += w.getTime();
 		}
-		// level up every time you reach another ten hours
-		int level = sum/600;
-		return level;
+		return sum;
+	}
+	
+	// calculates the level the person is currently at by their weight loss
+	public int calculateWeightLoss() {
+		PrevWorkout pws = PrevWorkout.getInstance();
+		int startWeight = pws.getPrevious().get(0).getWeight();
+		int finishWeight = pws.getPrevious().get(pws.size()-1).getWeight();
+		int weightLoss = finishWeight-startWeight;
+		return weightLoss;
 	}
 
 }

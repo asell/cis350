@@ -18,6 +18,7 @@ public final class R {
 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+
     
          */
         public static final int activity_horizontal_margin=0x7f050000;
@@ -155,41 +156,45 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
-        public static final int back=0x7f060011;
-        public static final int five=0x7f06000d;
-        public static final int four=0x7f06000c;
+        public static final int back=0x7f060012;
+        public static final int five=0x7f06000e;
+        public static final int four=0x7f06000d;
         public static final int hello_world=0x7f060002;
-        public static final int next=0x7f060010;
-        public static final int one=0x7f060009;
-        public static final int rating_header=0x7f060008;
-        public static final int seven=0x7f06000f;
-        public static final int six=0x7f06000e;
-        public static final int three=0x7f06000b;
-        public static final int title_activity_graph=0x7f060013;
+        public static final int next=0x7f060011;
+        public static final int one=0x7f06000a;
+        public static final int rating_header=0x7f060009;
+        public static final int seven=0x7f060010;
+        public static final int six=0x7f06000f;
+        public static final int three=0x7f06000c;
+        public static final int title_activity_graph=0x7f060014;
         public static final int title_activity_heart_rate=0x7f060005;
-        public static final int title_activity_heart_rate_two=0x7f060012;
-        public static final int title_activity_month_progress=0x7f060015;
+        public static final int title_activity_heart_rate_two=0x7f060013;
+        public static final int title_activity_loading_screen=0x7f060008;
+        public static final int title_activity_month_progress=0x7f060016;
         public static final int title_activity_new_workout=0x7f060003;
         public static final int title_activity_prev_workout=0x7f060004;
         public static final int title_activity_rating=0x7f060006;
-        public static final int title_activity_week_progress=0x7f060014;
+        public static final int title_activity_week_progress=0x7f060015;
         public static final int title_activity_weight_and_steps=0x7f060007;
-        public static final int title_activity_year_progress=0x7f060016;
-        public static final int two=0x7f06000a;
+        public static final int title_activity_year_progress=0x7f060017;
+        public static final int two=0x7f06000b;
     }
     public static final class style {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
+
     
 
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
+
     
          */
         public static final int AppBaseTheme=0x7f080000;

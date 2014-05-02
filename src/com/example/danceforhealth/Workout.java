@@ -106,25 +106,28 @@ public class Workout implements Parcelable {
 		this.weight = weight;
 	}
 	
-<<<<<<< HEAD
+
 	public void setTime(int minutes) {
 		this.time = minutes;
-=======
-	public void setDate(String date) {
-		this.date = date;
->>>>>>> upstream/master
 	}
 
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	@Override
 	public String toString() {
 		return (this.getType() + " on \n" + this.getDate());
 	}
 
 	public static final Parcelable.Creator<Workout> CREATOR = new Creator<Workout>() {
+		@Override
 		public Workout createFromParcel(Parcel source) {
 
 			return new Workout(source);
 		}
 
+		@Override
 		public Workout[] newArray(int size) {
 
 			return new Workout[size];
