@@ -58,6 +58,7 @@ public class HomeActivity extends Activity {
 			}
 		}
 
+		loadApp = false;
 
 		// set fonts
 		TextView txt = (TextView) findViewById(R.id.custom_font);
@@ -147,7 +148,10 @@ public class HomeActivity extends Activity {
 			int steps = Integer.parseInt(st);
 			String w = tokens[4];
 			int weight = Integer.parseInt(w);
-			String date = tokens[5];
+			String date = tokens[5]; // week
+			date += " " + tokens[6]; // month
+			date += " " + tokens[7]; // day 
+			date += " " + tokens[8]; // year
 
 			Workout wo = new Workout(type, strain, hr, steps, weight);
 			wo.setDate(date);
