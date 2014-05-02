@@ -1,8 +1,12 @@
 package com.example.danceforhealth;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -22,13 +26,15 @@ public class Workout implements Parcelable {
 		steps = 0;
 		weight = 0;
 		time = 0;
-		date = date.toString();
+		
 
 		Date date = new Date();
+
 
 		 SimpleDateFormat ft = 
 			      new SimpleDateFormat ("E M dd yyyy");
 		 this.date = ft.format(date);
+
 
 
 	}
@@ -50,7 +56,7 @@ public class Workout implements Parcelable {
 		setStrain(p.readInt());
 		setHeartrate(p.readInt());
 		setSteps(p.readInt());
-		setWeight(p.readInt());
+		setDate(p.readString());
 
 	}
 
@@ -150,8 +156,13 @@ public class Workout implements Parcelable {
 		parcel.writeInt(getHR());
 		parcel.writeInt(getSteps());
 		parcel.writeInt(getWeight());
+
 		parcel.writeInt(getTime());
 
+		parcel.writeString(getDate());
+
+
 	}
+	
 
 }

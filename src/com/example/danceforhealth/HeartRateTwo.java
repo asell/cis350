@@ -1,10 +1,16 @@
 package com.example.danceforhealth;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.Menu;
@@ -82,20 +88,41 @@ public class HeartRateTwo extends Activity {
 		timer.start();
 	}
 	
-	public void onNextButtonClick(View view) {
+	public void onNextButtonClick(View view) throws IOException {
 		
+
 
 //		PrevWorkout pw = PrevWorkout.getInstance();
 //		List<Workout> all = pw.getPrevious();
 //		
 //		all.add(w);
+
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+		
+		// set date for Workout object
+		Date date = new Date();
+		SimpleDateFormat ft = 
+				new SimpleDateFormat ("E M dd yyyy");
+		w.setDate(ft.format(date));
+		
+		// add workout to database
+		all.add(w);
+
+		
+		// add workout to internal memory
+		String FILENAME = "workout_data";
+		String info = w.getType() + " " + w.getStrain() + " " + w.getHeartrate() + " " + w.getSteps() 
+				+ " " + w.getWeight() + " " + w.getDate();
+
+		FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_APPEND);
+		fos.write(info.getBytes());
+		fos.close();
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, WorkoutSummary.class).putExtra("workout", w);
-		
-		
-		
+
 
 		// pass the Intent to the Activity, 
 		// using the specified request code

@@ -13,6 +13,13 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much do you like doing the workout?"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
     <RadioGroup
         android:id="@+id/radioGroup1"
         android:layout_width="match_parent"
@@ -62,12 +69,12 @@
             android:layout_height="wrap_content"
             android:text="@string/seven" />
     </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView2"
+    
+     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I hate it"
+        android:text="How much fun is the workout?"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <RadioGroup
@@ -120,126 +127,13 @@
             android:text="@string/seven" />
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/textView3"
+	<TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="It&apos;s not fun"
+        android:text="How tired does it make you?"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <RadioGroup
-        android:id="@+id/RadioGroup03"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/RadioButton21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/one" />
-
-        <RadioButton
-            android:id="@+id/RadioButton15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/two" />
-
-        <RadioButton
-            android:id="@+id/RadioButton16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/three" />
-
-        <RadioButton
-            android:id="@+id/RadioButton19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/four" />
-
-        <RadioButton
-            android:id="@+id/RadioButton18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/five" />
-
-        <RadioButton
-            android:id="@+id/RadioButton20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/six" />
-
-        <RadioButton
-            android:id="@+id/RadioButton17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/seven" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I feel bad physically while doing it"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <RadioGroup
-        android:id="@+id/RadioGroup02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/RadioButton11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/one" />
-
-        <RadioButton
-            android:id="@+id/RadioButton09"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/two" />
-
-        <RadioButton
-            android:id="@+id/RadioButton08"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/three" />
-
-        <RadioButton
-            android:id="@+id/RadioButton13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/four" />
-
-        <RadioButton
-            android:id="@+id/RadioButton14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/five" />
-
-        <RadioButton
-            android:id="@+id/RadioButton12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/six" />
-
-        <RadioButton
-            android:id="@+id/RadioButton10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/seven" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I am very frustrated by it"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+   
 
     <RadioGroup
         android:id="@+id/RadioGroup04"
@@ -291,12 +185,7 @@
             android:text="@string/seven" />
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="It makes me tired"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
 
     <LinearLayout
         android:layout_width="match_parent"

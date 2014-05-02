@@ -26,8 +26,6 @@ public void onCreate(Bundle icicle) {
 	for (int i = 0; i < workouts.size(); i++) {
 		values[i] = workouts.get(i);
 	}
-	//Workout[] values = (Workout[]) workouts.toArray(Workout[]);
-    
     
     View header = getLayoutInflater().inflate(R.layout.header, null);
     View footer = getLayoutInflater().inflate(R.layout.footer, null);
