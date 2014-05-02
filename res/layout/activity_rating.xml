@@ -185,29 +185,19 @@
             android:text="@string/seven" />
     </RadioGroup>
 
-    
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:onClick="onNextButtonClick"
+        android:text="@string/next" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal" >
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:background="@drawable/custom_button"
-            android:onClick="onNextButtonClick"
-            android:text="@string/next" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:gravity="center_vertical|center_horizontal|right"
-            android:text="@string/back" />
     </LinearLayout>
 
 </LinearLayout>

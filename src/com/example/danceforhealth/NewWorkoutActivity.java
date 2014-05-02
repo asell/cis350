@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class NewWorkoutActivity extends Activity implements OnItemSelectedListener{
@@ -31,6 +32,12 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
+		if(!w.getType().equals("")) {
+			setSpinnerSelection(w.getType(), spinner);
+		}
+		EditText et = (EditText) findViewById(R.id.editText1);
+		String time = Integer.toString(w.getTime());
+		et.setText(time);
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
@@ -52,14 +59,18 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 	
 	
 	public void onNextButtonClick(View view) {
-			w.setType(selection);
-			// create an Intent using the current Activity 
-			// and the Class to be created
-			Intent i = new Intent(this, RatingActivity.class).putExtra("workout", w);
-	
-			// pass the Intent to the Activity, 
-			// using the specified request code
-			startActivity(i);
+		
+		EditText et = (EditText) findViewById(R.id.editText1);
+		int time = Integer.parseInt(et.getText().toString());
+		w.setType(selection);
+		w.setTime(time);
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, RatingActivity.class).putExtra("workout", w);
+
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
 	}
 
 	
@@ -83,6 +94,26 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		case 4:
 			selection = "Swim";
 		}
+		
+	}
+	
+	public void setSpinnerSelection(String type, Spinner sp) {
+		if(type.equals("Dance")) {
+			sp.setSelection(0);
+		}
+		else if(type.equals("Run")) {
+			sp.setSelection(1);
+		}
+		else if(type.equals("Walk")) {
+			sp.setSelection(2);
+		}
+		else if(type.equals("Bike")) {
+			sp.setSelection(3);
+		}
+		else if(type.equals("Swim")) {
+			sp.setSelection(4);
+		}
+		
 		
 	}
 

@@ -27,7 +27,7 @@
         <item>Walk</item>
         <item>Bike</item>
         <item>Swim</item>
-        <item>Other</item>
+   
     </string-array>
 
     <string name="title_activity_heart_rate_two">Measure Your Heart Rate Part Two</string>
