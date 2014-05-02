@@ -18,9 +18,14 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class HomeActivity extends Activity {
+	
+	private boolean loadApp = true;
+	private String file = "data_workout";
+	private String data = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +34,26 @@ public class HomeActivity extends Activity {
 
 		Context context = this;
 
-		// get internal memory
-
-		String path=context.getFilesDir().getAbsolutePath()+"/data_workout";
-		File file = new File ( path ); 
-
-		if ( file.exists() ) {
-			try {
-				readFromFile();
+		// get internal memory when loading app
+		
+		if (loadApp) {
+			
+			try{
+		         FileInputStream fin = openFileInput(file);
+		         int c;
+		         String temp="";
+		         while( (c = fin.read()) != -1){
+		            temp = temp + Character.toString((char)c);
+		         }
+		         data = temp;
+		         Toast.makeText(getBaseContext(),"file read",
+		         Toast.LENGTH_SHORT).show();
 				Log.v("home", "read from log file");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} else {
-			file = new File(context.getFilesDir(), "data_workout");
-			Log.v("home", "created data file");
+				loadApp = false;
+
+		      }catch(Exception e){
+
+		      }
 		}
 
 
@@ -110,11 +119,9 @@ public void onDummyClick(View view) {
 	startActivity(i);
 }
 
-public void readFromFile() throws Exception {
-
-	String path = getFilesDir().getPath();
-
-	String info = getStringFromFile(path);
+public void createDatabase() throws Exception {
+	
+	if (data == null || data.equals("")) { return ; }
 
 	PrevWorkout pw = PrevWorkout.getInstance();
 	List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
@@ -123,7 +130,7 @@ public void readFromFile() throws Exception {
 	String[] lines;
 	String[] tokens;
 
-	lines = info.split(delims);
+	lines = data.split(delims);
 
 	for(String line : lines) {
 		String del = " ";

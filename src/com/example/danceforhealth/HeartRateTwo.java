@@ -19,6 +19,7 @@ import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HeartRateTwo extends Activity {
 
@@ -104,13 +105,22 @@ public class HeartRateTwo extends Activity {
 		all.add(w);
 		
 		// add workout to internal memory
-		String FILENAME = "workout_data";
-		String info = w.getType() + " " + w.getStrain() + " " + w.getHeartrate() + " " + w.getSteps() 
+		
+		String data = w.getType() + " " + w.getStrain() + " " + w.getHeartrate() + " " + w.getSteps() 
 				+ " " + w.getWeight() + " " + w.getDate();
-
-		FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_APPEND);
-		fos.write(info.getBytes());
-		fos.close();
+		String file = "data_workout";
+		
+	      try {
+	         FileOutputStream fOut = openFileOutput(file,MODE_APPEND);
+	         fOut.write(data.getBytes());
+	         fOut.close();
+	         Toast.makeText(getBaseContext(),"file saved",
+	         Toast.LENGTH_SHORT).show();
+	      } catch (Exception e) {
+	         // TODO Auto-generated catch block
+	         e.printStackTrace();
+	      }
+		
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created
