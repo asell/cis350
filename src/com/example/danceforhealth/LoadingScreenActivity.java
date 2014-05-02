@@ -69,10 +69,11 @@ public class LoadingScreenActivity extends Activity{
 		int level = calculateTime()/300 + 1;
 		int nextLevel = calculateTime()/300 + 2;
 		int minutesUntilNext = nextLevel*300 - calculateTime();
-		leveltxt.setText("You are currently at level " + level + "!\n"+
-				"You've lost " + calculateWeightLoss() + " pounds!\nWork out for " +
+		leveltxt.setText("You are currently at level " + level + " and have lost "+
+				 + calculateWeightLoss() + " pounds!\nWork out for " +
 				minutesUntilNext + " more minutes to level up!");
 		leveltxt.setTypeface(font_two);
+		//leveltxt.setTyp
 		timer.start();
 	}
 	

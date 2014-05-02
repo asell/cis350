@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:gravity="center"
-            android:text="Welcome!"
+            android:text="Welcome to Dance for Health!"
             android:textSize="40sp" />
 
         
@@ -33,7 +33,7 @@
             android:layout_marginBottom="15dp"
             android:gravity="center"
             android:text=""
-            android:textSize="40sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
 </RelativeLayout>
