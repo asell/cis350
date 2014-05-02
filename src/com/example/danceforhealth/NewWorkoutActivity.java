@@ -1,5 +1,7 @@
 package com.example.danceforhealth;
 
+import java.util.List;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,11 +13,10 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class NewWorkoutActivity extends Activity implements OnItemSelectedListener{
 
-	String selection = "Dance";
+	public String selection;
 	Workout w = new Workout();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,16 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
-		
+
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+		all.add(w);
+		selection = "Dance";
+
 		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
 		Button b = (Button) findViewById(R.id.button1);
 		b.setTypeface(font);
+		
 	}
 	
 	@Override
@@ -43,15 +50,6 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		return true;
 	}
 	
-	public void onHRButtonClick(View view) {
-		// create an Intent using the current Activity 
-		// and the Class to be created
-		Intent i = new Intent(this, HeartRateActivity.class);
-
-		// pass the Intent to the Activity, 
-		// using the specified request code
-		startActivity(i);
-	}
 	
 	public void onNextButtonClick(View view) {
 			w.setType(selection);
@@ -84,10 +82,6 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 			break;
 		case 4:
 			selection = "Swim";
-			break;
-		// learn how to allow user to input "other" in dropdown text box
-		case 5:
-			selection = "Other";
 		}
 		
 	}
@@ -96,5 +90,7 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 	public void onNothingSelected(AdapterView<?> parent) {
 		// TODO Auto-generated method stub
 	}
+	
+
 
 }

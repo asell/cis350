@@ -14,53 +14,52 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-        
-<!-- 	    <TextView -->
-<!-- 	        android:layout_width="wrap_content" -->
-<!-- 	        android:layout_height="wrap_content" -->
-<!-- 	        android:gravity="center" -->
-<!-- 	        android:layout_gravity="center_horizontal" -->
-<!-- 	        android:text="This will show a graph" /> -->
 
-		<Button
-		    android:id="@+id/week"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:layout_gravity="center_horizontal"
-		    android:layout_marginBottom="15dp"
-		    android:background="@drawable/custom_button"
-		    android:onClick="onWeekButtonClick"
-		    android:text="View This Week's Progress" />
-		
-		<Button
-	        android:id="@+id/month"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center_horizontal"
-        	android:layout_marginBottom="15dp"
-	        android:background="@drawable/custom_button"
-	        android:onClick="onMonthButtonClick"
-	        android:text="View This Month's Progress" />
-		
-		<Button
-	        android:id="@+id/year"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center_horizontal"
-        	android:layout_marginBottom="15dp"
-	        android:background="@drawable/custom_button"
-	        android:onClick="onYearButtonClick"
-	        android:text="View This Year's Progress" />
-	    
-		<Button
-	        android:id="@+id/back"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center_horizontal"
-	        android:background="@drawable/custom_button"
-	        android:onClick="onBackButtonClick"
-	        android:text="Back" />
-		
-	</LinearLayout>
+        <!-- <TextView -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:gravity="center" -->
+        <!-- android:layout_gravity="center_horizontal" -->
+        <!-- android:text="This will show a graph" /> -->
+
+        <Button
+            android:id="@+id/week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onWeekButtonClick"
+            android:text="View This Week&apos;s Progress" />
+
+        <Button
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onMonthButtonClick"
+            android:text="View This Month&apos;s Progress" />
+
+        <Button
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onYearButtonClick"
+            android:text="View This Year&apos;s Progress" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_button"
+            android:onClick="onBackButtonClick"
+            android:text="Back" />
+    </LinearLayout>
 
 </RelativeLayout>

@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NewWorkoutActivity" >
-     
+
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"
@@ -21,13 +21,13 @@
 
     <Button
         android:id="@+id/button1"
-        android:background="@drawable/custom_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="80dp"
+        android:background="@drawable/custom_button"
         android:onClick="onNextButtonClick"
         android:text="@string/next" />
 

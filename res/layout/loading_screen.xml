@@ -10,29 +10,30 @@
     tools:context=".HomeActivity" >
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/custom_font"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Going to this screen just adds a workout to the database" />
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="Welcome!"
+            android:textSize="40sp" />
 
-        <Button
-            android:id="@+id/preWorkout"
+        
+         <TextView
+            android:id="@+id/level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="28dp"
-            android:background="@drawable/custom_button"
-            android:onClick="onBackButtonClick"
-            android:text="Back" />
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="40sp" />
     </LinearLayout>
 
 </RelativeLayout>

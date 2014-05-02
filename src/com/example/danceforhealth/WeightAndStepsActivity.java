@@ -9,13 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class WeightAndStepsActivity extends Activity{
 	private int weight;
 	private int steps;
 	private Workout w;
 	
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_weight_and_steps);
@@ -51,11 +51,18 @@ public class WeightAndStepsActivity extends Activity{
 			steps = Integer.parseInt(et1.getText().toString());
 			w.setSteps(steps);
 		}
+		else {
+			w.setSteps(0);
+		}
 		if(!et2.getText().toString().trim().equals("")) {
 			weight = Integer.parseInt(et2.getText().toString());
 			w.setWeight(weight);
-		} 
-		
+
+		}
+		else {
+			w.setWeight(0);
+		}
+	
 		
 	
 		// create an Intent using the current Activity 
@@ -66,4 +73,31 @@ public class WeightAndStepsActivity extends Activity{
 		// using the specified request code
 		startActivity(i);
 	}
+	public void onBackButtonClick(View view) {
+		
+		EditText et1 = (EditText) findViewById(R.id.editText1);
+		EditText et2 = (EditText) findViewById(R.id.editText2);
+		if(!et1.getText().toString().trim().equals("")) {
+			steps = Integer.parseInt(et1.getText().toString());
+			w.setSteps(steps);
+		}
+		else {
+			w.setSteps(0);
+		}
+		if(!et2.getText().toString().trim().equals("")) {
+			weight = Integer.parseInt(et2.getText().toString());
+			w.setWeight(weight);
+
+		}
+		else {
+			w.setWeight(0);
+		}
+		// create an Intent using the current Activity 
+		// and the Class to be created
+		Intent i = new Intent(this, RatingActivity.class).putExtra("workout", w);
+
+		// pass the Intent to the Activity, 
+		// using the specified request code
+		startActivity(i);
+}
 }

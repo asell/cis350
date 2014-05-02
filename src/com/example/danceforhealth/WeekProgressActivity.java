@@ -6,12 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.androidplot.ui.LayoutManager;
-import com.androidplot.ui.SizeLayoutType;
-import com.androidplot.ui.SizeMetrics;
-import com.androidplot.ui.XLayoutStyle;
-import com.androidplot.ui.YLayoutStyle;
-import com.androidplot.ui.widget.Widget;
 import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.LineAndPointFormatter;
 import com.androidplot.xy.SimpleXYSeries;
@@ -41,7 +35,7 @@ public class WeekProgressActivity extends Activity {
  
         // Get previous workouts
     	PrevWorkout pw = PrevWorkout.getInstance();
-    	List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
+    	List<Workout> workouts = pw.getPrevious();
     	
     	// get current date and week
 		Date current = new Date();

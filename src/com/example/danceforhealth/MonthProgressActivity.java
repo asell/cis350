@@ -35,7 +35,7 @@ public class MonthProgressActivity extends Activity {
 
         // Get previous workouts
     	PrevWorkout pw = PrevWorkout.getInstance();
-    	List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
+    	List<Workout> workouts = pw.getPrevious();
  
         // get current date and month
         Date d = new Date();

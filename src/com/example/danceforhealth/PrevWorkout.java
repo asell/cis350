@@ -26,5 +26,9 @@ public class PrevWorkout {
 	public List<Workout> getPrevious() {
 		return previous;
 	}
+	
+	public int size() {
+		return previous.size();
+	}
 
 }
