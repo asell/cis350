@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -69,6 +70,9 @@ public class RatingActivity extends Activity{
 			// create an Intent using the current Activity 
 			// and the Class to be created
 			w.setStrain(strain);
+			
+			Log.v("duration", "= " + w.getTime());
+			
 			Intent i = new Intent(this, WeightAndStepsActivity.class).putExtra("workout", w);
 	
 			// pass the Intent to the Activity, 

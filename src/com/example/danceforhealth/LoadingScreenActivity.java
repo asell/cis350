@@ -17,8 +17,12 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoadingScreenActivity extends Activity{
+	
+	private String file = "data_workout";
+	private String data = "";
 
 	
 	@Override 
@@ -26,6 +30,28 @@ public class LoadingScreenActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		final Intent i = new Intent(this, HomeActivity.class);
 		setContentView(R.layout.loading_screen);
+		
+		try{
+			FileInputStream fin = openFileInput(file);
+			int c;
+			String temp="";
+			while( (c = fin.read()) != -1){
+				temp = temp + Character.toString((char)c);
+			}
+			data = temp;
+			Toast.makeText(getBaseContext(),"file read",
+					Toast.LENGTH_SHORT).show();
+			HomeActivity.createDatabase(data);
+			Log.v("home", "read from log file");
+			
+			//deleteFile(file);
+			
+		}catch(Exception e){
+
+		}
+		
+		
+		
 		CountDownTimer timer = new CountDownTimer(3000, 1000) {
 
 			@Override

@@ -53,7 +53,9 @@ public class Workout implements Parcelable {
 		setStrain(p.readInt());
 		setHeartrate(p.readInt());
 		setSteps(p.readInt());
+		setWeight(p.readInt());
 		setDate(p.readString());
+		setTime(p.readInt());
 
 	}
 
@@ -153,10 +155,9 @@ public class Workout implements Parcelable {
 		parcel.writeInt(getHR());
 		parcel.writeInt(getSteps());
 		parcel.writeInt(getWeight());
-
+		parcel.writeString(getDate());
 		parcel.writeInt(getTime());
 
-		parcel.writeString(getDate());
 
 
 	}

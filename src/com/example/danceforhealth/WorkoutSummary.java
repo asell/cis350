@@ -46,7 +46,7 @@ public class WorkoutSummary extends Activity{
 		type.setText("Your workout was " + workout.getType());
 		
 		TextView strain = (TextView)findViewById(R.id.workoutRating);
-		type.setText("Overall, you felt " + feel);
+		strain.setText("Overall, you felt " + feel);
 
 		TextView steps = (TextView)findViewById(R.id.workoutSteps);
 		steps.setText("You took " + workout.getSteps() + " steps!");
@@ -56,6 +56,9 @@ public class WorkoutSummary extends Activity{
 
 		TextView hr = (TextView)findViewById(R.id.workoutHR);
 		hr.setText("And your heartrate was " + workout.getHR());
+		
+		TextView length = (TextView)findViewById(R.id.workoutLength);
+		length.setText("You worked out for " + workout.getTime() + " minutes.");
 
 	}
 

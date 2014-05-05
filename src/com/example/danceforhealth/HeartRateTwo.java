@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -104,9 +105,12 @@ public class HeartRateTwo extends Activity {
 		all.add(w);
 
 		// add workout to internal memory
-		String data = w.getType() + " " + w.getStrain() + " " + w.getHeartrate() + " " + w.getSteps() 
-				+ " " + w.getWeight() + " " + w.getDate() + " " + w.getTime();
+		String data = w.getType() + "," + w.getStrain() + "," + w.getHeartrate() + "," + w.getSteps() 
+				+ "," + w.getWeight() + "," + w.getDate() + "," + w.getTime();
 		String file = "data_workout";
+		
+		Log.v("duration", "= " + w.getTime());
+
 		
 	      try {
 	         FileOutputStream fOut = openFileOutput(file,MODE_APPEND);

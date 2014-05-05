@@ -4,8 +4,8 @@
     <string name="app_name">Dance For Health</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_new_workout">Create a New Workout</string>
-    <string name="title_activity_prev_workout">PrevWorkoutActivity</string>
+    <string name="title_activity_prev_workout">Previous Workouts</string><string name="title_activity_new_workout">Create a New Workout</string>
+    
     <string name="title_activity_heart_rate">Measure Your Heart Rate</string>
     <string name="title_activity_rating">Rate How You Feel Post-Workout</string>
     <string name="title_activity_weight_and_steps">Input Your Weight and Steps Taken</string>
@@ -31,9 +31,9 @@
     </string-array>
 
     <string name="title_activity_heart_rate_two">Measure Your Heart Rate Part Two</string>
-    <string name="title_activity_graph">GraphActivity</string>
-    <string name="title_activity_week_progress">WeekProgressActivity</string>
-    <string name="title_activity_month_progress">MonthProgressActivity</string>
-    <string name="title_activity_year_progress">YearProgressActivity</string>
+    <string name="title_activity_graph">Progress</string>
+    <string name="title_activity_week_progress">Weekly Progress</string>
+    <string name="title_activity_month_progress">Monthly Progress</string>
+    <string name="title_activity_year_progress">Yearly Progress</string>
 
 </resources>
