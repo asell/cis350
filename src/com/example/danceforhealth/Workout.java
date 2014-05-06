@@ -18,6 +18,7 @@ public class Workout implements Parcelable {
 	private int weight;
 	private String date;
 	private int time;
+	private boolean update = false;
 
 	public Workout() {
 		type = "";
@@ -61,6 +62,60 @@ public class Workout implements Parcelable {
 
 	public String getDate() {
 		return date;
+	}
+	
+	public boolean getUpdate() {
+		return update;
+	}
+	
+	public void setUpdate(boolean b) {
+		update = b;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((date == null) ? 0 : date.hashCode());
+		result = prime * result + heartrate;
+		result = prime * result + steps;
+		result = prime * result + strain;
+		result = prime * result + time;
+		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		result = prime * result + weight;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Workout other = (Workout) obj;
+		if (date == null) {
+			if (other.date != null)
+				return false;
+		} else if (!date.equals(other.date))
+			return false;
+		if (heartrate != other.heartrate)
+			return false;
+		if (steps != other.steps)
+			return false;
+		if (strain != other.strain)
+			return false;
+		if (time != other.time)
+			return false;
+		if (type == null) {
+			if (other.type != null)
+				return false;
+		} else if (!type.equals(other.type))
+			return false;
+		if (weight != other.weight)
+			return false;
+		return true;
 	}
 
 	public String getType() {

@@ -104,7 +104,7 @@ public class HomeActivity extends Activity {
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
 		
-		workouts.clear();
+	//workouts.clear();
 
 		String delims = "\n";
 		String[] lines;

@@ -24,6 +24,13 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_workout);
+		
+		Bundle extras = getIntent().getExtras();
+ 		if (extras != null) {
+ 		    w = (Workout) extras.get("workout");
+ 		}
+		
+
 		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
 		spinner.setOnItemSelectedListener(this);
 		// Create an ArrayAdapter using the string array and a default spinner layout
