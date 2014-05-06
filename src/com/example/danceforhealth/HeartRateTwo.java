@@ -102,11 +102,13 @@ public class HeartRateTwo extends Activity {
 		w.setDate(ft.format(date));
 		
 		// add workout to database
+		if (!w.getUpdate()) {
 		all.add(w);
+		}
 
 		// add workout to internal memory
 		String data = w.getType() + "," + w.getStrain() + "," + w.getHeartrate() + "," + w.getSteps() 
-				+ "," + w.getWeight() + "," + w.getDate() + "," + w.getTime();
+				+ "," + w.getWeight() + "," + w.getDate() + "," + w.getTime() + "\n";
 		String file = "data_workout";
 		
 		Log.v("duration", "= " + w.getTime());
@@ -116,8 +118,8 @@ public class HeartRateTwo extends Activity {
 	         FileOutputStream fOut = openFileOutput(file,MODE_APPEND);
 	         fOut.write(data.getBytes());
 	         fOut.close();
-	         Toast.makeText(getBaseContext(),"file saved",
-	         Toast.LENGTH_SHORT).show();
+	      //   Toast.makeText(getBaseContext(),"file saved",
+	     //    Toast.LENGTH_SHORT).show();
 	      } catch (Exception e) {
 	         // TODO Auto-generated catch block
 	         e.printStackTrace();

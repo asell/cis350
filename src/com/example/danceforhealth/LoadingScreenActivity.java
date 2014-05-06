@@ -3,8 +3,10 @@ package com.example.danceforhealth;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,12 +41,19 @@ public class LoadingScreenActivity extends Activity{
 				temp = temp + Character.toString((char)c);
 			}
 			data = temp;
-			Toast.makeText(getBaseContext(),"file read",
-					Toast.LENGTH_SHORT).show();
+		//	Toast.makeText(getBaseContext(),"file read",
+			//		Toast.LENGTH_SHORT).show();
 			HomeActivity.createDatabase(data);
 			Log.v("home", "read from log file");
+			 
 			
 			//deleteFile(file);
+			// clear file
+			
+/*			FileOutputStream fOut = openFileOutput(file,MODE_PRIVATE);
+			String empty = "";
+	         fOut.write(empty.getBytes());
+	         fOut.close();*/
 			
 		}catch(Exception e){
 

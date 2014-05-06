@@ -1,9 +1,13 @@
 package com.example.danceforhealth;
 
+import java.util.Iterator;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -74,7 +78,27 @@ public class WorkoutSummary extends Activity{
 	public void onUpdateButtonClick(View view) {
 		// create an Intent using the current Activity 
 		// and the Class to be created
-		Intent i = new Intent(this, NewWorkoutActivity.class);
+		
+		// remove workout so you can recreate it
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> all = pw.getPrevious();
+		
+		Iterator<Workout> iter = all.iterator();
+		Workout temp = new Workout();
+		boolean b = false;
+		while (iter.hasNext()) {
+			temp = iter.next();
+			
+			if (workout.equals(temp)) {
+				 b = all.remove(temp);
+				 break;
+			}
+		}
+
+		Log.v("removed", "" + b);
+		
+		Intent i = new Intent(this, NewWorkoutActivity.class).putExtra("workout", temp);
+		
 
 		// pass the Intent to the Activity, 
 		// using the specified request code
