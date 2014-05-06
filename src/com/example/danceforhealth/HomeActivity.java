@@ -19,8 +19,13 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HomeActivity extends Activity {
+
+	private boolean loadApp = true;
+	private String file = "data_workout";
+	private String data = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,23 +34,6 @@ public class HomeActivity extends Activity {
 
 		Context context = this;
 
-		// get internal memory
-
-//		String path = context.getFilesDir().getAbsolutePath() + "/data_workout";
-//		File file = new File(path);
-//
-//		if (file.exists()) {
-//			try {
-//				readFromFile();
-//				Log.v("home", "read from log file");
-//			} catch (Exception e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		} else {
-//			file = new File(context.getFilesDir(), "data_workout");
-//			Log.v("home", "created data file");
-//		}
 
 		// set fonts
 		TextView txt = (TextView) findViewById(R.id.custom_font);
@@ -54,8 +42,7 @@ public class HomeActivity extends Activity {
 		Button d = (Button) findViewById(R.id.dummy);
 		Button pr = (Button) findViewById(R.id.progress);
 		Typeface font = Typeface.createFromAsset(getAssets(), "KOMIKAX_.ttf");
-		Typeface font_two = Typeface.createFromAsset(getAssets(),
-				"Komika_display.ttf");
+		Typeface font_two = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
 		txt.setTypeface(font);
 		btn.setTypeface(font_two);
 		pw.setTypeface(font_two);
@@ -71,103 +58,97 @@ public class HomeActivity extends Activity {
 	}
 
 	public void onNewButtonClick(View view) {
-		// create an Intent using the current Activity
+		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, NewWorkoutActivity.class);
 
-		// pass the Intent to the Activity,
+		// pass the Intent to the Activity, 
 		// using the specified request code
 		startActivity(i);
 	}
 
 	public void onPrevButtonClick(View view) {
-		// create an Intent using the current Activity
+		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, PrevWorkoutActivity.class);
 
-		// pass the Intent to the Activity,
+		// pass the Intent to the Activity, 
 		// using the specified request code
 		startActivity(i);
 	}
 
 	public void onProgressButtonClick(View view) {
-		// create an Intent using the current Activity
+		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, GraphActivity.class);
 
-		// pass the Intent to the Activity,
+		// pass the Intent to the Activity, 
 		// using the specified request code
 		startActivity(i);
 	}
 
 	public void onDummyClick(View view) {
-		// create an Intent using the current Activity
+		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, DummyActivity.class);
 
-		// pass the Intent to the Activity,
+		// pass the Intent to the Activity, 
 		// using the specified request code
 		startActivity(i);
 	}
 
-//	public void readFromFile() throws Exception {
-//
-//		String path = getFilesDir().getPath();
-//
-//		String info = getStringFromFile(path);
-//
-//		PrevWorkout pw = PrevWorkout.getInstance();
-//		List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
-//
-//		String delims = "\n";
-//		String[] lines;
-//		String[] tokens;
-//
-//		lines = info.split(delims);
-//
-//		for (String line : lines) {
-//			String del = " ";
-//			tokens = line.split(del);
-//
-//			String type = tokens[0];
-//			String str = tokens[1];
-//			int strain = Integer.parseInt(str);
-//			String heart = tokens[2];
-//			int hr = Integer.parseInt(heart);
-//			String st = tokens[3];
-//			int steps = Integer.parseInt(st);
-//			String w = tokens[4];
-//			int weight = Integer.parseInt(w);
-//			String date = tokens[5];
-//
-//			Workout wo = new Workout(type, strain, hr, steps, weight);
-//			wo.setDate(date);
-//			workouts.add(wo);
-//		}
-//
-//	}
-//
-//	public static String convertStreamToString(InputStream is) throws Exception {
-//		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-//		StringBuilder sb = new StringBuilder();
-//		String line = null;
-//		while ((line = reader.readLine()) != null) {
-//			sb.append(line).append("\n");
-//		}
-//		reader.close();
-//
-//		return sb.toString();
-//	}
-//
-//
-//
-//	public static String getStringFromFile(String filePath) throws Exception {
-//		File fl = new File(filePath);
-//		FileInputStream fin = new FileInputStream(fl);
-//		String ret = convertStreamToString(fin);
-//		// Make sure you close all streams.
-//		fin.close();
-//		return ret;
-//	}
+	public static void createDatabase(String data) throws Exception {
+
+		if (data == null || data.equals("")) { return ; }
+
+		PrevWorkout pw = PrevWorkout.getInstance();
+		List<Workout> workouts = (ArrayList<Workout>) pw.getPrevious();
+		
+		workouts.clear();
+
+		String delims = "\n";
+		String[] lines;
+		String[] tokens;
+
+		lines = data.split(delims);
+
+		for (String line : lines) {
+			String del = ",";
+			tokens = line.split(del);
+
+			String type = tokens[0];
+			String str = tokens[1];
+			int strain = Integer.parseInt(str);
+			String heart = tokens[2];
+			int hr = Integer.parseInt(heart);
+			String st = tokens[3];
+			int steps = Integer.parseInt(st);
+			String w = tokens[4];
+			int weight = Integer.parseInt(w);
+			String date = tokens[5]; 
+			String timeString = tokens[6];
+			int time = Integer.parseInt(timeString);
+
+			Workout wo = new Workout(type, strain, hr, steps, weight);
+			wo.setDate(date);
+			wo.setTime(time);
+			workouts.add(wo);
+		}
+
+
+	}
+
+	public static String convertStreamToString(InputStream is) throws Exception {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+		StringBuilder sb = new StringBuilder();
+		String line = null;
+		while ((line = reader.readLine()) != null) {
+			sb.append(line).append("\n");
+		}
+		reader.close();
+
+		return sb.toString();
+	}
+
 
 }

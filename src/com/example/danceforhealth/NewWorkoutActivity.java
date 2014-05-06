@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,9 +40,7 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		String time = Integer.toString(w.getTime());
 		et.setText(time);
 
-		PrevWorkout pw = PrevWorkout.getInstance();
-		List<Workout> all = pw.getPrevious();
-		all.add(w);
+
 		selection = "Dance";
 
 		Typeface font = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
@@ -62,8 +61,10 @@ public class NewWorkoutActivity extends Activity implements OnItemSelectedListen
 		
 		EditText et = (EditText) findViewById(R.id.editText1);
 		int time = Integer.parseInt(et.getText().toString());
+		Log.v("new workout", "time = " + time);
 		w.setType(selection);
 		w.setTime(time);
+		Log.v("duration", "= " + time);
 		// create an Intent using the current Activity 
 		// and the Class to be created
 		Intent i = new Intent(this, RatingActivity.class).putExtra("workout", w);

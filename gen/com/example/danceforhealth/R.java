@@ -55,22 +55,22 @@ public final class R {
         public static final int RadioButton28=0x7f0a002b;
         public static final int RadioGroup01=0x7f0a0021;
         public static final int RadioGroup04=0x7f0a002a;
-        public static final int action_settings=0x7f0a003e;
+        public static final int action_settings=0x7f0a003f;
         public static final int back=0x7f0a0005;
         public static final int button1=0x7f0a0008;
-        public static final int button2=0x7f0a0039;
+        public static final int button2=0x7f0a003a;
         public static final int custom_font=0x7f0a0010;
         public static final int custom_font_two=0x7f0a0006;
         public static final int dummy=0x7f0a0013;
         public static final int editText1=0x7f0a0017;
         public static final int editText2=0x7f0a0032;
-        public static final int firstLine=0x7f0a003d;
+        public static final int firstLine=0x7f0a003e;
         public static final int hrText=0x7f0a000e;
         public static final int hr_input=0x7f0a000c;
         public static final int hr_input_button=0x7f0a000d;
-        public static final int icon=0x7f0a003b;
+        public static final int icon=0x7f0a003c;
         public static final int imageView1=0x7f0a0007;
-        public static final int level=0x7f0a003a;
+        public static final int level=0x7f0a003b;
         public static final int linearLayout1=0x7f0a000f;
         public static final int listview=0x7f0a0014;
         public static final int month=0x7f0a0003;
@@ -86,7 +86,7 @@ public final class R {
         public static final int radio5=0x7f0a001e;
         public static final int radio6=0x7f0a001f;
         public static final int radioGroup1=0x7f0a0018;
-        public static final int secondLine=0x7f0a003c;
+        public static final int secondLine=0x7f0a003d;
         public static final int spinner1=0x7f0a0016;
         public static final int textView1=0x7f0a0000;
         public static final int textView2=0x7f0a000b;
@@ -95,11 +95,12 @@ public final class R {
         public static final int timer=0x7f0a0009;
         public static final int timerText=0x7f0a000a;
         public static final int week=0x7f0a0002;
-        public static final int workoutHR=0x7f0a0038;
-        public static final int workoutRating=0x7f0a0035;
-        public static final int workoutSteps=0x7f0a0036;
+        public static final int workoutHR=0x7f0a0039;
+        public static final int workoutLength=0x7f0a0035;
+        public static final int workoutRating=0x7f0a0036;
+        public static final int workoutSteps=0x7f0a0037;
         public static final int workoutType=0x7f0a0034;
-        public static final int workoutWeight=0x7f0a0037;
+        public static final int workoutWeight=0x7f0a0038;
         public static final int year=0x7f0a0004;
     }
     public static final class layout {
@@ -155,8 +156,8 @@ public final class R {
         public static final int title_activity_heart_rate_two=0x7f060013;
         public static final int title_activity_loading_screen=0x7f060008;
         public static final int title_activity_month_progress=0x7f060016;
-        public static final int title_activity_new_workout=0x7f060003;
-        public static final int title_activity_prev_workout=0x7f060004;
+        public static final int title_activity_new_workout=0x7f060004;
+        public static final int title_activity_prev_workout=0x7f060003;
         public static final int title_activity_rating=0x7f060006;
         public static final int title_activity_week_progress=0x7f060015;
         public static final int title_activity_weight_and_steps=0x7f060007;

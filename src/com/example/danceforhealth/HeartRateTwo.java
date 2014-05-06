@@ -13,11 +13,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HeartRateTwo extends Activity {
 
@@ -89,13 +91,6 @@ public class HeartRateTwo extends Activity {
 	}
 	
 	public void onNextButtonClick(View view) throws IOException {
-		
-
-
-//		PrevWorkout pw = PrevWorkout.getInstance();
-//		List<Workout> all = pw.getPrevious();
-//		
-//		all.add(w);
 
 		PrevWorkout pw = PrevWorkout.getInstance();
 		List<Workout> all = pw.getPrevious();
@@ -109,15 +104,24 @@ public class HeartRateTwo extends Activity {
 		// add workout to database
 		all.add(w);
 
-		
 		// add workout to internal memory
-		String FILENAME = "workout_data";
-		String info = w.getType() + " " + w.getStrain() + " " + w.getHeartrate() + " " + w.getSteps() 
-				+ " " + w.getWeight() + " " + w.getDate();
+		String data = w.getType() + "," + w.getStrain() + "," + w.getHeartrate() + "," + w.getSteps() 
+				+ "," + w.getWeight() + "," + w.getDate() + "," + w.getTime();
+		String file = "data_workout";
+		
+		Log.v("duration", "= " + w.getTime());
 
-		FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_APPEND);
-		fos.write(info.getBytes());
-		fos.close();
+		
+	      try {
+	         FileOutputStream fOut = openFileOutput(file,MODE_APPEND);
+	         fOut.write(data.getBytes());
+	         fOut.close();
+	         Toast.makeText(getBaseContext(),"file saved",
+	         Toast.LENGTH_SHORT).show();
+	      } catch (Exception e) {
+	         // TODO Auto-generated catch block
+	         e.printStackTrace();
+	      }
 		
 		// create an Intent using the current Activity 
 		// and the Class to be created

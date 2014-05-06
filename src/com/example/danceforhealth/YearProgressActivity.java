@@ -59,7 +59,7 @@ public class YearProgressActivity extends Activity {
 		}
 		
 		if ((count < currentMonth) && (workouts.size() > count)) {
-    		int base = workouts.get(count-1).getWeight();
+    		int base = workouts.get(workouts.size() - count - 1).getWeight();
     		boolean toggle = true;
     		for (int i = 1; i < currentMonth; i++) {
     			if ((Integer)values[i] == null) {
@@ -77,7 +77,7 @@ public class YearProgressActivity extends Activity {
                 "This Year");                           // Set the display title of the series
  
         // Create a formatter to use for drawing a series using LineAndPointRenderer
-        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, Color.RED, null);
+        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, null, null);
 
  
         // add a new series' to the xyplot:

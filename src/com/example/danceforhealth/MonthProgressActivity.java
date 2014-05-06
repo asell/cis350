@@ -47,21 +47,24 @@ public class MonthProgressActivity extends Activity {
 		String currentMonth = temp[1];
         
 		int count = 0;
-		Number[] values = new Number[32];
+		Number[] values = new Number[6];
 		for (Workout w : workouts) {
 			String[] date = w.getDate().split(" ");
     		int day = Integer.parseInt(date[2]);
+    		String dow = date[0];
     		String month = date[1];
     		if (month.equals(currentMonth)) {
-    			values[day] = w.getWeight();
+    			if (day - sortDay(dow)<= 0) values[1] = w.getWeight();
+    			else if ((day - sortDay(dow))/7 == 4) values[(day - sortDay(dow))/7 + 1] = w.getWeight();
+    			else values[(day - sortDay(dow))/7 + 2] = w.getWeight();
     			count++;
     		}
 		}
 		
 		if ((count < currentDay) && (workouts.size() > count)) {
-    		int base = workouts.get(count-1).getWeight();
+    		int base = workouts.get(workouts.size() - count - 1).getWeight();
     		boolean toggle = true;
-    		for (int i = 1; i < currentDay; i++) {
+    		for (int i = 1; i < currentDay/7 + 1; i++) {
     			if ((Integer)values[i] == null) {
     				if (toggle) values[i] = base;
     				else values[i] = values[i-1];
@@ -77,7 +80,7 @@ public class MonthProgressActivity extends Activity {
                 "This Month");                           // Set the display title of the series
  
         // Create a formatter to use for drawing a series using LineAndPointRenderer
-        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, Color.RED, null);
+        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, null, null);
 
  
         // add a new series' to the xyplot:
@@ -85,15 +88,33 @@ public class MonthProgressActivity extends Activity {
  
         // reduce the number of range labels
         plot.getGraphWidget().setDomainLabelOrientation(-45);
-        plot.setDomainBoundaries(1, 31, BoundaryMode.FIXED);
+        plot.setDomainBoundaries(1, 5, BoundaryMode.FIXED);
         plot.setRangeBoundaries(50, 200, BoundaryMode.FIXED);
-        plot.setDomainStep(XYStepMode.INCREMENT_BY_VAL, 5.0);
+        plot.setDomainStep(XYStepMode.INCREMENT_BY_VAL, 1.0);
         plot.setRangeStep(XYStepMode.INCREMENT_BY_VAL, 10.0);
 
 		Typeface font_two = Typeface.createFromAsset(getAssets(), "Komika_display.ttf");
 		Button pr = (Button) findViewById(R.id.back);
 		pr.setTypeface(font_two);
 		
+	}
+	
+	private int sortDay(String day) {
+		if (day.equals("Mon")) {
+			return 0;
+		} else if (day.equals("Tue")) {
+			return 1;
+		} else if (day.equals("Wed")) {
+			return 2;
+		} else if (day.equals("Thu")) {
+			return 3;
+		} else if (day.equals("Fri")) {
+			return 4;
+		} else if (day.equals("Sat")) {
+			return 5;
+		} else {
+			return 6;
+		}
 	}
 
 	@Override

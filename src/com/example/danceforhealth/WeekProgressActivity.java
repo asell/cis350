@@ -64,13 +64,13 @@ public class WeekProgressActivity extends Activity {
     		long millsInDay = 86400000;
     		
     		if ((now-time)/millsInDay <= min && (now-time)/millsInDay >= 0) {
-    			if (values[sortDay(dow)] == null) count++;
+    			count++;
     			values[sortDay(dow)] = w.getWeight();
     		}
     	}
     	
     	if ((count < min + 1) && (workouts.size() > count)) {
-    		int base = workouts.get(count-1).getWeight();
+    		int base = workouts.get(workouts.size() - count - 1).getWeight();
     		boolean toggle = true;
     		for (int i = 1; i < min; i++) {
     			if ((Integer)values[i] == null) {
@@ -88,7 +88,7 @@ public class WeekProgressActivity extends Activity {
                 "This Week");                           // Set the display title of the series
  
         // Create a formatter to use for drawing a series using LineAndPointRenderer
-        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, Color.RED, null);
+        LineAndPointFormatter series1Format = new LineAndPointFormatter(Color.RED, Color.RED, null, null);
 
  
         // add a new series' to the xyplot:

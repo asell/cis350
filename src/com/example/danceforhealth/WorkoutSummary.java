@@ -31,9 +31,22 @@ public class WorkoutSummary extends Activity{
 		txt.setTypeface(font);
 		b1.setTypeface(font);
 		b2.setTypeface(font);
+		
+		String feel ;
+		
+		if (workout.getStrain() < 3) {
+			feel = "GREAT";
+		} else if (workout.getStrain() < 5) {
+			feel = "GOOD";
+		} else {
+			feel = "OKAY";
+		}
 
 		TextView type = (TextView)findViewById(R.id.workoutType);
 		type.setText("Your workout was " + workout.getType());
+		
+		TextView strain = (TextView)findViewById(R.id.workoutRating);
+		strain.setText("Overall, you felt " + feel);
 
 		TextView steps = (TextView)findViewById(R.id.workoutSteps);
 		steps.setText("You took " + workout.getSteps() + " steps!");
@@ -43,6 +56,9 @@ public class WorkoutSummary extends Activity{
 
 		TextView hr = (TextView)findViewById(R.id.workoutHR);
 		hr.setText("And your heartrate was " + workout.getHR());
+		
+		TextView length = (TextView)findViewById(R.id.workoutLength);
+		length.setText("You worked out for " + workout.getTime() + " minutes.");
 
 	}
 
