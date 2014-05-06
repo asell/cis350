@@ -40,7 +40,7 @@ public class DummyActivity extends Activity {
 
 	public void createWorkout() {
 		
-		String d2 = "Wed 4 30 2014";
+		String d2 = "Thu 5 1 2014";
 		String d3 = "Mon 4 28 2014";
 		String d4 = "Sat 4 12 2014";
 		String d5 = "Sat 3 15 2014";
